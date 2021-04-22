@@ -82,7 +82,7 @@ a {
   position: absolute;
   right: 0;
   top: 32%;
-  background-image: url("/img/keyboard_tab.svg");
+  background-image: url("../img/keyboard_tab.svg");
   background-size: contain;
   background-repeat: no-repeat;
   font-size: 16px;
@@ -130,7 +130,7 @@ a {
   width: 30px;
   height: 30px;
   background-color: rgba(0,0,0,0);
-  background-image: url("/img/search.svg");
+  background-image: url("../img/search.svg");
   background-size: contain;
   background-repeat: no-repeat;
   border: 0;
@@ -190,7 +190,7 @@ a {
   width: 590px;
   height: 550px;
   border-radius: 20px;
-  background-image: url("/img/22@2x.jpg");
+  background-image: url("../img/22@2x.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -215,7 +215,7 @@ a {
   font-size: 16px;
   color: #ffcc66;
   padding-right: 15px;
-  background-image: url("/img/next.svg");
+  background-image: url("../img/next.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
@@ -261,16 +261,16 @@ a {
   margin-bottom: 24px;
 }
 .url-card1 {
-  background-image: url("/img/10@2x.jpg") ;
+  background-image: url("../img/10@2x.jpg") ;
 }
 .url-card2 {
-  background-image: url("/img/15@2x.jpg") ;
+  background-image: url("../img/15@2x.jpg") ;
 }
 .url-card3 {
-  background-image: url("/img/12@2x.jpg") ;
+  background-image: url("../img/12@2x.jpg") ;
 }
 .url-card4 {
-  background-image: url("/img/carlo-d-agnolo-aFxSh_l4fbY-unsplash@2x.jpg") ;
+  background-image: url("../img/carlo-d-agnolo-aFxSh_l4fbY-unsplash@2x.jpg") ;
 }
 .services-card-heading {
   display: inline-block;
@@ -278,7 +278,7 @@ a {
   font-size: 22px;
   color: #cc9933;
   padding-right: 25px;
-  background-image: url("/img/next.svg");
+  background-image: url("../img/next.svg");
   background-size: 10px;
   background-repeat: no-repeat;
   background-position: right;
@@ -309,6 +309,30 @@ a {
   width: 75px;
   margin-bottom: 15px;
 }
+.url-benefits-card1{
+  background-image: url("../img/bathtub@2x.png") ;
+}
+.url-benefits-card2{
+  background-image: url("../img/hanger@2x.png") ;
+}
+.url-benefits-card3{
+  background-image: url("../img/heating@2x.png") ;
+}
+.url-benefits-card4{
+  background-image: url("../img/hotel-key@2x.png") ;
+}
+.url-benefits-card5{
+  background-image: url("../img/parking@2x.png") ;
+}
+.url-benefits-card6{
+  background-image: url("../img/reception@2x.png") ;
+}
+.url-benefits-card7{
+  background-image: url("../img/security-box@2x.png") ;
+}
+.url-benefits-card8{
+  background-image: url("../img/swimming-pool@2x.png") ;
+}
 .accommodation-card {
   width: 368px;
   height: 440px;
@@ -321,28 +345,28 @@ a {
   margin-right: 0;
 }
 .url-accommodation-card1 {
-  background-image: url("/img/23@2x.jpg") ;
+  background-image: url("../img/23@2x.jpg") ;
 }
 .url-accommodation-card2 {
-  background-image: url("/img/24@2x.jpg") ;
+  background-image: url("../img/24@2x.jpg") ;
 }
 .url-accommodation-card3 {
-  background-image: url("/img/26@2x.jpg") ;
+  background-image: url("../img/26@2x.jpg") ;
 }
 .url-accommodation-card4 {
-  background-image: url("/img/29-2@2x.jpg") ;
+  background-image: url("../img/29-2@2x.jpg") ;
 }
 .url-accommodation-card5 {
-  background-image: url("/img/30@2x.jpg") ;
+  background-image: url("../img/30@2x.jpg") ;
 }
 .url-accommodation-card6 {
-  background-image: url("/img/31@2x.jpg") ;
+  background-image: url("../img/31@2x.jpg") ;
 }
 .url-accommodation-card7 {
-  background-image: url("/img/27@2x.jpg") ;
+  background-image: url("../img/27@2x.jpg") ;
 }
 .url-accommodation-card8 {
-  background-image: url("/img/29@2x.jpg") ;
+  background-image: url("../img/29@2x.jpg") ;
 }
 .cost-per-night {
   display: inline-block;
@@ -383,7 +407,7 @@ a {
 }
 .all-options {
   position: relative;
-  background-image: url("/img/41@2x.jpg") ;
+  background-image: url("../img/41@2x.jpg") ;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -394,7 +418,7 @@ a {
   font-size: 22px;
   color: #fff;
   padding-right: 25px;
-  background-image: url("/img/next-white.svg");
+  background-image: url("../img/next-white.svg");
   background-size: 10px;
   background-repeat: no-repeat;
   background-position: right;
