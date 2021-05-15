@@ -263,12 +263,10 @@ section{
   background-repeat: no-repeat;
   background-position: center top;
 }
-.services-card:nth-child(2n+1) {
-  margin-right: 24px;
-}
+
 .services-card:nth-child(1),
   .services-card:nth-child(2)  {
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 }
 
 .url-card1 {
@@ -291,7 +289,6 @@ section{
 }
 .cart-posit{
  justify-content: space-between;
- height: 600px;
 }
 
 .benefits-card {
@@ -302,6 +299,10 @@ section{
   background-color: #fff;
   border-radius: 1em;
 }
+.benefits-card:not(:nth-last-child(-n+4)) {
+  margin-bottom: 23px;
+}
+
 .card-img{
   background-size: 64px 66px;
   background-repeat: no-repeat;
@@ -350,7 +351,9 @@ section{
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center top;
-  margin-bottom: 25px;
+}
+.accommodation-card:not(:nth-last-child(-n+3)) {
+  margin-bottom: 23px;
 }
 
 .url-accommodation-card1 {
