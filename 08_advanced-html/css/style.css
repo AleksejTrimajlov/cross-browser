@@ -546,11 +546,11 @@ select {
   color: #999999;
 }
 
-footer {
+.footer {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
-  padding: 44px 52px;
+  padding: 51px;
   color: #FFFFFF;
   background: #333333;
   border-radius: 15px;
@@ -594,15 +594,36 @@ footer {
   height: 228px;
 }
 
-.sn-imgs {
+.social-imgs {
   display: flex;
   flex-direction: column;
   margin-left: auto;
+  margin-right: 0;
 }
 
-.sn-link {
+.social-link {
   display: flex;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
-.sn-link:not(:last-child) {
+.url-social-trip-advisor {
+  background-image: url("../img/Component 25.svg") ;
+}
+.url-social-twitter {
+  background-image: url("../img/twitter.svg") ;
+}
+.url-social-facebook {
+  background-image: url("../img/facebook.svg") ;
+}
+.url-social-vk {
+  background-image: url("../img/social.svg") ;
+}
+.url-social-instagram {
+  background-image: url("../img/instagram.svg") ;
+}
+
+.social-imgs-item:not(:last-child) {
   margin-bottom: 20px;
 }
