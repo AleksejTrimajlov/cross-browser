@@ -36,6 +36,11 @@
 
 :root {
   box-sizing: border-box;
+  --main-color: #cc9933;
+  --focus-color: #e9c479;
+  --active-color: #a47312;
+  --text-color: #999999;
+  --DARKEN-color: #333333;
 }
 
 *,
@@ -73,28 +78,28 @@ ul {
 
 .btn {
   padding: 13px 20px;
-  color: #cc9933;
+  color: var(--main-color);
   background-color: #fff;
-  border: 1px solid #cc9933;
+  border: 1px solid var(--main-color);
   border-radius: 10px;
-  transition-property:  background-color border color;
+  transition-property:  background-color, border, color;
   transition-duration: .3s;
   transition-timing-function: ease;
 }
 .btn:hover {
   color: #fff;
-  background-color: #CC9933;
-  border: 1px solid #CC9933;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
 }
 .btn:focus {
   color: #fff;
-  background-color: #CC9933;
-  border: 1px solid #CC9933;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
 }
 .btn:active {
   color: #fff;
-  background-color: #A47312;
-  border: 1px solid #A47312;
+  background-color: var(--active-color);
+  border: 1px solid var(--active-color);
 }
 
 .headings {
@@ -103,7 +108,7 @@ ul {
   padding-left: 40px;
   font-size: 40px;
   font-weight: normal;
-  color: #333333;
+  color: var(--DARKEN-color);
 }
 
 .icon-link {
@@ -114,13 +119,13 @@ ul {
   transition: color .2s ease;
 }
 .icon-link:hover {
-  color: #E9C479;
+  color: var(--focus-color);
 }
 .icon-link:focus {
-  color: #CC9933;
+  color: var(--main-color);
 }
 .icon-link:active {
-  color: #A47312;
+  color: var(--active-color);
 }
 
 .text-info {
@@ -140,20 +145,20 @@ ul {
 }
 
 .info-special {
-  color: #CC9933;
+  color: var(--main-color);
 }
 .info-special:hover {
-  color: #E9C479;
+  color: var(--focus-color);
 }
 .info-special:focus {
-  color: #CC9933;
+  color: var(--main-color);
 }
 .info-special:active {
-  color: #A47312;
+  color: var(--active-color);
 }
 
 .info-spam {
-  color: #999999;
+  color: var(--text-color);
 }
 
 /* Header */
@@ -184,45 +189,45 @@ ul {
   color: #666666;
   font-size: 22px;
   font-weight: 600;
-  transition: border color .2s ease;
+  transition: border, color .2s ease;
 }
 .header__tel:hover {
-  color: #CC9933;
+  color: var(--main-color);
 }
 .header__tel:focus {
   position: relative;
   top: -3px;
   left: -5px;
-  color: #CC9933;
+  color: var(--main-color);
   padding: 5px;
   padding-bottom: 0;
-  outline: 1px solid #CC9933;
+  outline: 1px solid var(--main-color);
 }
 .header__tel:active {
-  color: #A47312;
+  color: var(--active-color);
 }
 
 .header__personal-area {
   margin-left: auto;
   padding-left: 25px;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='21' height='12' viewBox='0 0 21 12' fill='none'%3e%3cpath d='M10.59 1.41L14.17 5H0V7H14.17L10.58 10.59L12 12L18 6L12 0L10.59 1.41ZM19 0V12H21V0H19Z' fill='%23CC9933'/%3e%3c/svg%3e ");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='21' height='12' viewBox='0 0 21 12' fill='none'%3e%3cpath d='M10.59 1.41L14.17 5H0V7H14.17L10.58 10.59L12 12L18 6L12 0L10.59 1.41ZM19 0V12H21V0H19Z' fill='%2var(--main-color)'/%3e%3c/svg%3e ");
   background-repeat: no-repeat;
   background-position: left;
   font-size: 16px;
-  color: #cc9933;
-  transition: background-image color .2s ease;
+  color: var(--main-color);
+  transition: background-image, color .2s ease;
 }
 .header__personal-area:hover {
-  color: #E9C479;
+  color: var(--focus-color);
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='21' height='12' viewBox='0 0 21 12' fill='none'%3e%3cpath d='M10.59 1.41L14.17 5H0V7H14.17L10.58 10.59L12 12L18 6L12 0L10.59 1.41ZM19 0V12H21V0H19Z' fill='%23E9C479'/%3e%3c/svg%3e ");
 }
 .header__personal-area:focus {
-  color: #CC9933;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='21' height='12' viewBox='0 0 21 12' fill='none'%3e%3cpath d='M10.59 1.41L14.17 5H0V7H14.17L10.58 10.59L12 12L18 6L12 0L10.59 1.41ZM19 0V12H21V0H19Z' fill='%23CC9933'/%3e%3c/svg%3e ");
-  outline: 1px solid #CC9933;
+  color: var(--main-color);
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='21' height='12' viewBox='0 0 21 12' fill='none'%3e%3cpath d='M10.59 1.41L14.17 5H0V7H14.17L10.58 10.59L12 12L18 6L12 0L10.59 1.41ZM19 0V12H21V0H19Z' fill='%2var(--main-color)'/%3e%3c/svg%3e ");
+  outline: 1px solid var(--main-color);
 }
 .header__personal-area:active {
-  color: #A47312;
+  color: var(--active-color);
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='21' height='12' viewBox='0 0 21 12' fill='none'%3e%3cpath d='M10.59 1.41L14.17 5H0V7H14.17L10.58 10.59L12 12L18 6L12 0L10.59 1.41ZM19 0V12H21V0H19Z' fill='%23A47312'/%3e%3c/svg%3e ");
 }
 
@@ -250,16 +255,16 @@ ul {
 }
 
 .header__list-item:hover {
-  color: #E9C479;
-  border-bottom: 1px solid #E9C479;
+  color: var(--focus-color);
+  border-bottom: 1px solid var(--focus-color);
 }
 .header__list-item:focus {
-  color: #CC9933;
-  border-bottom: 1px solid #CC9933;
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
 }
 .header__list-item:active {
-  color: #A47312;
-  border-bottom: 1px solid #A47312;
+  color: var(--active-color);
+  border-bottom: 1px solid var(--active-color);
 }
 
 .header__hot-deals {
@@ -354,7 +359,18 @@ ul {
 }
 
 /* Services */
-
+.url-card1 {
+  background: url("../img/10@2x.jpg"), linear-gradient( #2A2736 50%, #fff 50%);
+}
+.url-card2 {
+  background: url("../img/15@2x.jpg"), linear-gradient( #2A2736 50%, #fff 50%);
+}
+.url-card3 {
+  background: url("../img/12@2x.jpg"), linear-gradient( #2A2736 50%, #fff 50%);
+}
+.url-card4 {
+  background: url("../img/carlo-d-agnolo-aFxSh_l4fbY-unsplash@2x.jpg"), linear-gradient( #2A2736 50%, #fff 50%);
+}
 .section-services__card {
   position: relative;
   overflow: hidden;
@@ -366,17 +382,6 @@ ul {
   background-repeat: no-repeat;
   background-position: center top;
 }
-/*
-.section-services__card::after {
-  content: ' ';
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 145px;
-  background-color: #333333;
-} */
 
 .section-services__card:not(:nth-last-child(-n+2)){
   margin-bottom: 23px;
@@ -385,24 +390,13 @@ ul {
   margin-right: 23px;
 }
 
-.url-card1 {
-  background-image: url("../img/10@2x.jpg") ;
-}
-.url-card2 {
-  background-image: url("../img/15@2x.jpg") ;
-}
-.url-card3 {
-  background-image: url("../img/12@2x.jpg") ;
-}
-.url-card4 {
-  background-image: url("../img/carlo-d-agnolo-aFxSh_l4fbY-unsplash@2x.jpg") ;
-}
+
 
 .section-services__heading {
   display: inline-block;
   margin-bottom: 10px;
   font-size: 22px;
-  color: #CC9933;
+  color: var(--main-color);
 }
 
 /* Benefits */
@@ -494,11 +488,11 @@ ul {
   display: inline-block;
   margin-bottom: 10px;
   font-size: 16px;
-  color: #333333;
+  color: var(--DARKEN-color);
   margin-top: 0;
 }
 .section-аccommodation__cost samp {
-  color: #999999;
+  color: var(--text-color);
 }
 .section-аccommodation__cost strong {
   font-size: 22px;
@@ -514,7 +508,7 @@ ul {
   margin-top: 0;
   margin-bottom: 15px;
   font-size: 16px;
-  color: #333333;
+  color: var(--DARKEN-color);
   font-weight: 400;
 }
 
@@ -522,7 +516,7 @@ ul {
   margin-top: 0;
   margin-bottom: 20px;
   font-size: 16px;
-  color: #999999;
+  color: var(--text-color);
 }
 
 .section-аccommodation__card__last {
@@ -602,7 +596,7 @@ ul {
   background: url('../img/Rectangle 2.svg') no-repeat right center;
 }
 
-.section-tour__аrrival-date {
+.section-tour__аrrivar-date {
   border: none;
   appearance: none;
 }
@@ -686,7 +680,7 @@ ul {
   display: flex;
   padding: 51px;
   color: #FFFFFF;
-  background: #333333;
+  background: var(--DARKEN-color);
   border-radius: 15px;
   line-height: 190%;
 
@@ -736,18 +730,16 @@ ul {
   background-position: center top;
 }
 
-.url-social-trip-advisor {
-  background-image: url("../img/Component 25.svg") ;
+.icon-social path{
+  fill: #999999;
+  transition: fill .2s ease;
 }
-.url-social-twitter {
-  background-image: url("../img/twitter.svg") ;
+.icon-social:hover path {
+  fill: var(--focus-color);
 }
-.url-social-facebook {
-  background-image: url("../img/facebook.svg") ;
+.icon-social:focus path {
+  fill: var(--main-color);
 }
-.url-social-vk {
-  background-image: url("../img/social.svg") ;
-}
-.url-social-instagram {
-  background-image: url("../img/instagram.svg") ;
+.icon-social:active path {
+  fill: var(--active-color);
 }
