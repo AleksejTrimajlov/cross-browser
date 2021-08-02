@@ -146,6 +146,7 @@ ul {
 
 .info-special {
   color: var(--main-color);
+  transition: color .2s ease;
 }
 .info-special:hover {
   color: var(--focus-color);
@@ -209,29 +210,32 @@ ul {
 
 .header__personal-area {
   margin-left: auto;
-  padding-left: 25px;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='21' height='12' viewBox='0 0 21 12' fill='none'%3e%3cpath d='M10.59 1.41L14.17 5H0V7H14.17L10.58 10.59L12 12L18 6L12 0L10.59 1.41ZM19 0V12H21V0H19Z' fill='%2var(--main-color)'/%3e%3c/svg%3e ");
-  background-repeat: no-repeat;
-  background-position: left;
   font-size: 16px;
   color: var(--main-color);
-  transition: background-image, color .2s ease;
+  transition: color .2s ease;
 }
 .header__personal-area:hover {
   color: var(--focus-color);
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='21' height='12' viewBox='0 0 21 12' fill='none'%3e%3cpath d='M10.59 1.41L14.17 5H0V7H14.17L10.58 10.59L12 12L18 6L12 0L10.59 1.41ZM19 0V12H21V0H19Z' fill='%23E9C479'/%3e%3c/svg%3e ");
 }
 .header__personal-area:focus {
   color: var(--main-color);
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='21' height='12' viewBox='0 0 21 12' fill='none'%3e%3cpath d='M10.59 1.41L14.17 5H0V7H14.17L10.58 10.59L12 12L18 6L12 0L10.59 1.41ZM19 0V12H21V0H19Z' fill='%2var(--main-color)'/%3e%3c/svg%3e ");
   outline: 1px solid var(--main-color);
 }
 .header__personal-area:active {
   color: var(--active-color);
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='21' height='12' viewBox='0 0 21 12' fill='none'%3e%3cpath d='M10.59 1.41L14.17 5H0V7H14.17L10.58 10.59L12 12L18 6L12 0L10.59 1.41ZM19 0V12H21V0H19Z' fill='%23A47312'/%3e%3c/svg%3e ");
 }
-
-
+.header__personal-area path {
+  transition: fill .2s ease;
+}
+.header__personal-area:hover path  {
+  fill: var(--focus-color);
+}
+.header__personal-area:focus path {
+  fill: var(--main-color);
+}
+.header__personal-area:active path {
+  fill: var(--active-color);
+}
 .header__nav {
   display: flex;
   align-items: center;
@@ -248,6 +252,8 @@ ul {
 .header__list-item {
   font-size: 16px;
   color: #666666;
+  border-bottom: none;
+  transition: border, color .2s ease;
 }
 
 .header__list-item:not(:last-child) {
