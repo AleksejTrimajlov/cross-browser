@@ -247,6 +247,7 @@ ul {
 
 .header__list {
   display: inline-flex;
+  align-items: center;
 }
 
 .header__list-item {
@@ -262,6 +263,7 @@ ul {
 
 .header__list-item:hover {
   color: var(--focus-color);
+  margin-top: 1px;
   border-bottom: 1px solid var(--focus-color);
 }
 .header__list-item:focus {
