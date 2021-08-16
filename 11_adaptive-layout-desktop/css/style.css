@@ -69,15 +69,18 @@ ul {
 }
 
 .section {
-  margin-bottom: 100px;
+  margin-bottom: 104px;
 }
 
-.headings{
+.headings {
   margin-top: 0;
+  margin-left: 3px;
+  margin-bottom: 17px;
   font-style: normal;
   font-weight: normal;
   font-size: 48px;
   line-height: 59px;
+  letter-spacing: 2px;
   color: #333;
 }
 
@@ -107,10 +110,12 @@ ul {
 .header__list{
   display: flex;
   align-items: center;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
 .header__list-item:not(:last-child) {
-  margin-right: 85px;
+  margin-right: 87px;
 }
 .header__list-item {
   border-bottom: 1px solid rgba(0, 0, 0, 0);
@@ -199,9 +204,11 @@ ul {
 /* Slider */
 
 .slider-section {
+  position: relative;
   max-width: 1770px;
   min-height: 620px;
   padding: 100px 80px;
+  padding-top: 110px;
   background-image: url("../img/low-angle-photo-of-balconies-2462015.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -210,13 +217,14 @@ ul {
 
 .slider-section__heading {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 19px;
   max-width: 837px;
   color: #fff;
   font-style: normal;
   font-weight: 800;
-  font-size: 70px;
+  font-size: 75px;
   line-height: 85px;
+  letter-spacing: 4px;
 }
 
 .slider-section__info {
@@ -228,11 +236,12 @@ ul {
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;
+  letter-spacing: 1px;
 }
 
 .slider-section__link {
   display: inline-block;
-  padding: 24px 36px;
+  padding: 24px 40px;
   background-color: #FF9900;
   color: #fff;
   font-size: 24px;
@@ -240,6 +249,7 @@ ul {
   font-weight: bold;
   line-height: 29px;
   text-align: center;
+  letter-spacing: 1px;
   transition: background-color .2s ease;
 }
 .slider-section__link:hover {
@@ -251,16 +261,34 @@ ul {
 .slider-section__link:active {
   background-color: #E1670E;
 }
-
+.slider-section__list {
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - 42px);
+}
+.slider-section__item {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffffffa4;
+}
+.slider-section__item_activ {
+  background-color: #fff;
+}
+.slider-section__item +
+.slider-section__item {
+ margin-left: 20px;
+}
 /* about-us */
 
 .about-us__content {
   max-width: 1135px;
-  margin-bottom: 50px;
+  margin-bottom: 47px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 32px;
   color: #333;
 }
 
@@ -284,8 +312,10 @@ ul {
   font-weight: bold;
   justify-content: space-between;
   padding: 50px;
+  padding-top: 51px;
   background-color: rgba(0, 0, 0, .5);
   color: #fff;
+  letter-spacing: 1px;
 }
 
 .about-us-card__description {
@@ -296,7 +326,7 @@ ul {
 }
 
 .about-us-card__detail-link {
-  padding: 20px 38px;
+  padding: 18px 36px;
   border: 3px solid #FF9900;
   transition-property:  background-color, border;
   transition-duration: .2s;
@@ -329,7 +359,7 @@ ul {
 }
 
 .about-us__card {
-  padding: 65px 137px;
+  padding: 65px 118px;
   padding-left: 300px;
   border: 1px solid #CACACA;
   background-repeat: no-repeat;
@@ -343,18 +373,19 @@ ul {
 }
 
 .about-us__card-headings {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;
+  letter-spacing: 2px;
   color: #333
 }
 
 /* about-working */
 
 .about-working__headings {
-  margin-bottom: 50px;
+  margin-bottom: 46px;
 }
 
 .about-working__steps {
@@ -375,16 +406,18 @@ ul {
 }
 
 .working-steps__item:not(:last-child) {
-  margin-right: 85px;
+  margin-right: 81px;
 }
 
 .worcking-steps__btn {
   border: none;
+  padding: 0;
+  margin: 0;
   background-color: #fff;
   color: #333;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 22px;
   border: 1px solid #00000000;
   transition-property:  border-bottom, color;
@@ -411,21 +444,23 @@ ul {
 }
 
 .step-card__headings {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 32px;
+  letter-spacing: 2px;
   color: #333;
 }
 
 .step-card__description{
   max-width: 758px;
-  margin-bottom: 50px;
+  margin-bottom: 46px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 35px;
+  line-height: 33px;
+  letter-spacing: 1px;
   color: #333;
 }
 
@@ -434,7 +469,7 @@ ul {
 }
 
 .step-card__link_detail {
-  padding: 20px 38px;
+  padding: 20px 44px;
   background-color: #FF9900;
   color: #fff;
   transition: background-color .2s ease;
@@ -472,7 +507,7 @@ ul {
 
 .step-card__link +
 .step-card__link {
-  margin-left: 32px;
+  margin-left: 30px;
 }
 
 .step-card__image {
@@ -481,9 +516,11 @@ ul {
 }
 
 /* questions */
-
+.questions  {
+  margin-bottom: 96px;
+}
 .questions__headings {
-  margin-bottom: 32px;
+  margin-bottom: 39px;
 }
 
 details > summary {
@@ -501,6 +538,7 @@ details > summary::-webkit-details-marker {
   font-size: 24px;
   line-height: 32px;
   color: #333333;
+  letter-spacing: 2px;
   transition-property: border, color;
   transition-duration: .3s;
   transition-timing-function: ease;
@@ -517,7 +555,10 @@ details > summary::-webkit-details-marker {
   color: #333333;
   border-color: #CACACA;
 }
-
+.questions__details +
+.questions__details {
+  border-top: none;
+}
 .questions__summary {
   display: flex;
   align-items: center;
@@ -586,16 +627,20 @@ details > summary::-webkit-details-marker {
   width: 100%;
 }
 
+.footer__navigation {
+  margin-right: 101px;
+}
+
 .footer__logo {
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .footer__list {
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
-  line-height: 32px;
+  letter-spacing: 2px;
   color: #CACACA;
   transition: color .2s ease;
 }
@@ -610,13 +655,16 @@ details > summary::-webkit-details-marker {
 }
 
 .footer__naw {
-  margin-bottom: 90px;
+  margin-bottom: 93px;
 }
 
 .footer__social {
   display: flex;
+  margin-left: 1px  ;
 }
-
+.footer__list-item{
+  margin-bottom: 16px;
+}
 .footer__social-item {
   display: inline-block;
 }
@@ -649,7 +697,8 @@ details > summary::-webkit-details-marker {
 }
 
 .footer__headings {
-  margin-bottom: 25px;
+  margin-top: 5px;
+  margin-bottom: 20px;
   color: #CACACA;
 }
 
@@ -684,7 +733,8 @@ details > summary::-webkit-details-marker {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 32px;
+  line-height: 33px;
+  letter-spacing: 1px;
   color: #CACACA;
 }
 
@@ -731,13 +781,15 @@ details > summary::-webkit-details-marker {
 .footer__textarea {
   resize: none;
   max-height: 150px;
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 }
 
 .footer__submit {
   margin-right: 22px;
+  margin-left: 2px;
   align-self: flex-start;
-  padding: 19px 52px;
+  padding: 19px 53px;
+  letter-spacing: 1px;
   border: none;
   background-color: #FF9900;
   font-style: normal;
@@ -803,7 +855,11 @@ details > summary::-webkit-details-marker {
 
 @media (max-width: 1024px) {
   .section {
-    margin-bottom: 80px;
+    margin-bottom: 84px;
+  }
+
+  .headings {
+    margin-bottom: 7px;
   }
 
   .container {
@@ -821,11 +877,15 @@ details > summary::-webkit-details-marker {
 
   .header__logo {
     margin: 0;
+    margin-top: 4px;
+    margin-right: 11px;
   }
 
   .header__search {
     margin: 0;
+    margin-top: 4px;
   }
+
   .header__logo-img {
     width: 150px;
     height: 48px;
@@ -833,12 +893,35 @@ details > summary::-webkit-details-marker {
 
   .header__burger {
     display: block;
+    padding-left: 0;
+    padding-top: 10px;
   }
 
+  .slider-section__heading {
+    font-size: 62px;
+    line-height: 71px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+  }
+  .slider-section__link {
+    padding: 25px 39px;
+  }
   .slider-section {
+    padding-top: 167px;
+    padding-left: 77px;
+    padding-bottom: 160px;
     background-image: url(../img/low-angle-photo-of-balconies-2462015-1024.jpg);
   }
-
+  .slider-section__info {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    line-height: 25px;
+    margin-bottom: 57px;
+  }
+  .about-us__content {
+    letter-spacing: 1px;
+    margin-bottom: 60px;
+  }
   .about-us__details {
     flex-direction: column ;
   }
@@ -856,15 +939,64 @@ details > summary::-webkit-details-marker {
     padding-top: 444px;
   }
 
+  .about-us__card {
+    padding-left: 316px;
+    background-position: left 77px top 63px;
+  }
+  .about-working__headings {
+    margin-bottom: 44px;
+  }
+  .about-working__steps {
+    margin-bottom: 50px;
+  }
+  .step-card__headings {
+    margin-bottom: 6px;
+  }
+  .step-card__description {
+    line-height: 32px;
+  }
+  .step-card__description {
+    margin-bottom: 24px;
+  }
   .step-card__image {
     max-width: 437px;
     max-height: 689px;
   }
-
+  .questions {
+    margin-bottom: 79px;
+  }
+  .questions__headings {
+    margin-bottom: 29px;
+  }
+  .questions__details {
+    letter-spacing: 1.6px;
+    font-size: 20px;
+  }
+  .questions__summary_svg {
+    margin-left: 100px;
+  }
   .footer__info {
     display: none;
   }
-
+  .footer__list {
+    letter-spacing: 1px;
+  }
+  .footer__naw {
+    margin-bottom: 97px;
+  }
+  .footer__navigation {
+    margin-right: 140px;
+  }
+  .footer__headings {
+    margin-top: 6px;
+    margin-bottom: 20px;
+  }
+  .footer__submit {
+    padding: 19px 38px;
+  }
+  .footer__label-checkbox {
+    letter-spacing: .5px;
+  }
   .about-working__step-card {
     padding-right: 487px;
     background-size: 437px 689px;
@@ -874,21 +1006,23 @@ details > summary::-webkit-details-marker {
 
 @media (max-width: 768px) {
   .header__container {
-    padding-top: 10px;
-    padding-bottom: 11px;
+    padding-top: 6px;
+    padding-bottom: 5px;
   }
-
+  .header__burger {
+    padding-top: 5px;
+  }
   .slider-section {
-    padding: 160px 40px;
+    padding: 165px 40px 160px;
   }
 
   .slider-section__heading {
-    font-size: 56px;
     line-height: 61px;
+    font-size: 50px;
   }
 
   .slider-section__info {
-    font-size: 21px;
+    font-size: 18px;
     line-height: 22px;
   }
 
@@ -906,14 +1040,16 @@ details > summary::-webkit-details-marker {
 
   .about-us__card {
     background-size: 144px 99px;
-    padding: 35px 46px 35px 170px;
-    background-position: left 20px top 68px;
+    padding: 35px 40px 35px 170px;
+    background-position: left 23px top 67px;
   }
 
   .working-steps__list {
     justify-content: space-between;
   }
-
+  .about-working__headings {
+    margin-bottom: 40px;
+  }
   .about-working__step-card {
     padding: 0;
     padding-top: 322px;
@@ -937,19 +1073,33 @@ details > summary::-webkit-details-marker {
   }
 
   .questions__summary_svg {
-    margin-left: 48px;
+    margin-left: 20px;
   }
 
+  .questions {
+    margin-bottom: 80px;
+  }
+  .questions__headings {
+    margin-bottom: 31px;
+  }
   .footer__naw {
     display: none;
   }
-
+  .footer__textarea {
+    margin-bottom: 32px;
+  }
   .footer__container {
     flex-direction: column-reverse;
   }
-
+  .footer__logo {
+    margin-bottom: 11px;
+  }
   .footer__form {
-    margin-bottom: 50px;
+    margin-bottom: 49px;
+    max-width: 540px;
+  }
+  .footer__headings {
+    margin-bottom: 23px;
   }
 }
 
@@ -963,13 +1113,15 @@ details > summary::-webkit-details-marker {
   }
 
   .headings {
+    margin-bottom: 20px;
     font-size: 24px;
     line-height: 29px;
+    letter-spacing: 1px;
   }
 
   .header__container {
-    padding-top: 17px;
-    padding-bottom: 17px;
+    padding-top: 14px;
+    padding-bottom: 10px;
   }
 
   .header__logo-img {
@@ -987,27 +1139,40 @@ details > summary::-webkit-details-marker {
   }
 
   .slider-section__heading {
+    margin-bottom: 9px;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
+    letter-spacing: 2px;
   }
 
   .slider-section__info {
     font-size: 12px;
-    line-height: 16px;
+    line-height: 15px;
     text-align: center;
     margin-bottom: 32px;
+    letter-spacing: 1px;
   }
 
   .slider-section__link {
-    padding: 15px 20px;
+    padding: 12px 26px;
     font-size: 12px;
     line-height: 15px;
   }
 
+  .slider-section__list {
+    bottom: 14px;
+    left: calc(50% - 35px);
+  }
+  .slider-section__item {
+    width: 10px;
+    height: 10px;
+  }
   .about-us__content {
+    margin-bottom: 13px;
     font-size: 14px;
     line-height: 28px;
+    letter-spacing: .9px;
   }
 
   .about-us__card_main {
@@ -1032,7 +1197,7 @@ details > summary::-webkit-details-marker {
   }
 
   .about-us-card__detail-link {
-    padding: 11px 30px;
+    padding: 11px 42px;
     color: #FF9900;
     font-weight: bold;
     font-size: 12px;
@@ -1041,12 +1206,20 @@ details > summary::-webkit-details-marker {
   }
 
   .about-us__card {
-    background-size: 64px 49px;
+    background-size: 65px;
     padding: 61px 0px 0px;
     background-position: left top;
     border: none;
   }
-
+  .about-us__side-cards > * + * {
+    margin-top: 30px;
+  }
+  .about-us__card-url-one {
+    background-image: url(../img/Frame\ 39.svg);
+  }
+  .about-us__card-url-two {
+    background-image: url(../img/Frame\ 38.svg);
+  }
   .about-us__card-headings {
     font-style: normal;
     font-weight: 500;
@@ -1055,16 +1228,20 @@ details > summary::-webkit-details-marker {
   }
 
   .about-us-card__description {
+    margin-bottom: 10px;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 28px;
+    letter-spacing: 1px;
   }
 
   .about-working__headings {
     margin-bottom: 16px;
   }
-
+  .about-us {
+    margin-bottom: 50px;
+  }
   .worcking-steps__btn {
     padding: 0;
     font-style: normal;
@@ -1080,16 +1257,23 @@ details > summary::-webkit-details-marker {
   .about-working__steps {
     margin-bottom: 16px;
   }
-
+  .about-working__step-card {
+    padding-top: 178px;
+    background-image: url(../img/Rectangle18-320.png);
+    background-size: 290px 160px;
+    background-position: top;
+}
   .step-card__headings {
     font-size: 18px;
     line-height: 32px;
+    letter-spacing: 1px;
   }
 
   .step-card__description {
     font-size: 14px;
     line-height: 28px;
     margin-bottom: 16px;
+    letter-spacing: .9px;
   }
 
   .step-card__link {
@@ -1099,18 +1283,23 @@ details > summary::-webkit-details-marker {
   }
 
   .step-card__link_detail {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 48px;
+    padding-right: 48px;
   }
-
+  .step-card__link_contract {
+    padding: 11px 33px 14px;
+  }
   .step-card__link + .step-card__link {
-    margin-left: 10px;
+    margin-left: 6px;
   }
-
+  .questions__headings {
+    margin-bottom: 15px;
+  }
   .questions__summary {
     padding: 30px  0;
     font-size: 14px;
     line-height: 24px;
+    letter-spacing: .9px;
   }
 
   .questions__summary_svg {
@@ -1119,6 +1308,12 @@ details > summary::-webkit-details-marker {
     margin-left: 14px;
   }
 
+  .footer {
+    padding: 30px 0;
+  }
+  .footer__textarea {
+    margin-bottom: 23px;
+  }
   .footer__input::-webkit-input-placeholder {
     color: #CACACA;
   }
@@ -1146,9 +1341,13 @@ details > summary::-webkit-details-marker {
   .footer__submit {
     margin: 0 auto;
     margin-bottom: 11px;
-    padding: 12px 23px 13px 24px;
+    padding: 10px 27px 10px 27px;
+    font-size: 12px;
   }
-
+  .footer__label-checkbox {
+    letter-spacing: .8px;
+    font-size: 16px;
+  }
   .footer__form {
     margin-bottom: 16px;
     padding-bottom: 16px;
@@ -1156,20 +1355,23 @@ details > summary::-webkit-details-marker {
   }
 
   .footer__navigation {
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   .footer__logo {
-    margin-bottom: 16px;
+    margin-bottom: 9px;
   }
 
   .footer__logo-img {
     width: 131px;
     height: 42px;
   }
-
+  .footer__social-item:not(:last-child) {
+    margin-right: 15px;
+  }
   .footer__social-icon {
     width: 40px;
     height: 40px;
