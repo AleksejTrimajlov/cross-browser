@@ -1,39 +1,39 @@
 @font-face {
-  font-family: 'Muller';
-  src: url('../fonts/MullerMedium.woff2') format('woff2'),
-       url('../fonts/MullerMedium.woff') format('woff');
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+       url('../fonts/Montserrat-Medium.woff') format('woff');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+       url('../fonts/Montserrat-Regular.woff') format('woff');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+       url('../fonts/Montserrat-SemiBold.woff') format('woff');
   font-display: swap;
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Muller';
-  src: url('../fonts/MullerRegular.woff') format('woff2'),
-       url('../fonts/MullerRegular.woff') format('woff');
-  font-display: swap;
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Muller';
-  src: url('../fonts/MullerLight.woff2') format('woff2'),
-       url('../fonts/MullerLight.woff') format('woff');
-  font-display: swap;
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Muller';
-  src: url('../fonts/MullerBold.woff2') format('woff2'),
-       url('../fonts/MullerBold.woff') format('woff');
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+       url('../fonts/Montserrat-Bold.woff') format('woff');
   font-display: swap;
   font-weight: bold;
   font-style: normal;
 }
-
+/* ------------------------------ */
 :root {
   box-sizing: border-box;
 }
@@ -43,13 +43,10 @@
 ::before {
   box-sizing: inherit;
 }
-* {
-  margin: 0;
-  font-family: 'Muller';
-}
 
 body {
   background-color: #fff;
+  font-family: 'Montserrat';
 }
 
 a {
@@ -58,8 +55,9 @@ a {
 }
 
 ul {
-  list-style: none;
+  margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .container {
@@ -69,23 +67,25 @@ ul {
 }
 
 .section {
-  margin-bottom: 104px;
+  margin-bottom: 100px;
 }
 
 .headings {
   margin-top: 0;
-  margin-left: 3px;
   margin-bottom: 17px;
-  font-style: normal;
-  font-weight: normal;
   font-size: 48px;
-  line-height: 59px;
-  letter-spacing: 2px;
+  font-weight: normal;
+  line-height: 63px;
   color: #333;
 }
-
+.btn {
+  padding: 0;
+  border: none;
+  background-color: #fff0;
+  cursor: pointer;
+}
+/* ------------------------------ */
 /* Header */
-
 .header {
   box-shadow: 0 0 15px rgba(0,0,0,0.25);
 }
@@ -94,8 +94,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 75px;
-  max-height: 100px;
+  padding: 14px 74px 10px 74px;
 }
 
 .header__logo {
@@ -111,24 +110,27 @@ ul {
   display: flex;
   align-items: center;
   font-size: 18px;
-  letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .header__list-item:not(:last-child) {
-  margin-right: 87px;
+  margin-right: 86px;
 }
+
 .header__list-item {
   border-bottom: 1px solid rgba(0, 0, 0, 0);
   transition: border, color .2s ease;
 }
+
 .header__list-item:hover {
   border-bottom: 1px solid #FF9900;
 }
-.header__list-item:focus {
 
+.header__list-item:focus {
   padding: 1px 1px 0;
   border: 1px solid #FF9900;
 }
+
 .header__list-item:active {
   color: #E1670E;
   border-bottom: 1px solid #E1670E;
@@ -141,20 +143,20 @@ ul {
 .header__search-btn {
   width: 24px;
   height: 24px;
-  padding: 0;
-  border: none;
-  background-color: #fff0;
-  cursor: pointer;
 }
+
 .header__search-icon-path {
   transition: fill, stroke .2s ease;
 }
+
 .header__search-btn:hover path{
   stroke: #FF9900;
 }
+
 .header__search-btn:hover rect {
   fill: #FF9900;
 }
+
 .header__search-btn:focus {
   outline: 2px solid #FF9900;
 }
@@ -163,35 +165,33 @@ ul {
   display: none;
   position: fixed;
   top: 14px;
+  right: 70px;
   z-index: 10;
 }
 
 .search-active-container__form {
   display: flex;
-  align-items: center;
   padding: 18px;
   background-color: #fff;
+  align-items: center;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
   border-radius: 16px;
 }
 
 .search-active-container__input {
   margin-right: 14px;
-  border: none;
   width: 412px;
+  border: none;
   border-bottom: 1px solid #DCDCDC;
 }
+
 .search-active-container__input:focus-visible {
   outline: none;
 }
 
 .search-active-container__close {
-  padding: 0;
   margin: 0;
   margin-left: 22px;
-  background-color: #fff0;
-  border: none;
-  cursor: pointer;
 }
 
 .header__burger {
@@ -200,15 +200,11 @@ ul {
   background-color: #fff0;
   padding: 5px;
 }
-
+/* ------------------------------ */
 /* Slider */
-
 .slider-section {
   position: relative;
-  max-width: 1770px;
-  min-height: 620px;
   padding: 100px 80px;
-  padding-top: 110px;
   background-image: url("../img/low-angle-photo-of-balconies-2462015.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -217,14 +213,13 @@ ul {
 
 .slider-section__heading {
   margin: 0;
-  margin-bottom: 19px;
+  margin-bottom: 25px;
   max-width: 837px;
   color: #fff;
-  font-style: normal;
   font-weight: 800;
-  font-size: 75px;
+  font-size: 70px;
   line-height: 85px;
-  letter-spacing: 4px;
+  letter-spacing: .9px;
 }
 
 .slider-section__info {
@@ -232,93 +227,98 @@ ul {
   margin-bottom: 90px;
   max-width: 790px;
   color: #fff;
-  font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;
-  letter-spacing: 1px;
 }
 
 .slider-section__link {
   display: inline-block;
-  padding: 24px 40px;
+  padding: 24px 39px;
   background-color: #FF9900;
   color: #fff;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: bold;
+  font-size: 23px;
   line-height: 29px;
+  font-weight: bold;
   text-align: center;
-  letter-spacing: 1px;
   transition: background-color .2s ease;
 }
+
 .slider-section__link:hover {
   background-color: #ff9900a7;
 }
+
 .slider-section__link:focus {
   background-color: #FF9900a7;
 }
+
 .slider-section__link:active {
   background-color: #E1670E;
 }
+
 .slider-section__list {
   display: flex;
   position: absolute;
-  bottom: 30px;
+  bottom: 29px;
   left: calc(50% - 42px);
 }
+
 .slider-section__item {
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background-color: #ffffffa4;
 }
+
 .slider-section__item_activ {
   background-color: #fff;
 }
+
 .slider-section__item +
 .slider-section__item {
  margin-left: 20px;
 }
+/* ------------------------------ */
 /* about-us */
-
 .about-us__content {
-  max-width: 1135px;
-  margin-bottom: 47px;
-  font-style: normal;
-  font-weight: normal;
+  max-width: 1235px;
+  margin-bottom: 50px;
   font-size: 16px;
   line-height: 32px;
   color: #333;
 }
 
 .about-us__card_main {
-  flex-grow: 2;
-  flex-shrink: 1;
+  flex-grow: 1;
   display: flex;
   align-items: flex-end;
-  padding-top: 426px;
   background-image: url("../img/Rectangle\ 2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
+.about-us__card-headings {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 24px;
+  line-height: 29px;
+  color: #333
+}
+
 .about-us-card__info {
-  flex-shrink: 3;
   width: 100%;
   display: flex;
   align-items: center;
   font-weight: bold;
   justify-content: space-between;
   padding: 50px;
-  padding-top: 51px;
   background-color: rgba(0, 0, 0, .5);
   color: #fff;
-  letter-spacing: 1px;
 }
 
 .about-us-card__description {
+  margin: 0;
   max-width: 430px;
   font-style: normal;
   font-size: 16px;
@@ -326,7 +326,7 @@ ul {
 }
 
 .about-us-card__detail-link {
-  padding: 18px 36px;
+  padding: 17px 35px;
   border: 3px solid #FF9900;
   transition-property:  background-color, border;
   transition-duration: .2s;
@@ -359,7 +359,7 @@ ul {
 }
 
 .about-us__card {
-  padding: 65px 118px;
+  padding: 65px 117px 63px;
   padding-left: 300px;
   border: 1px solid #CACACA;
   background-repeat: no-repeat;
@@ -371,32 +371,20 @@ ul {
 .about-us__card-url-two {
   background-image: url("../img/Frame\ 12.svg");
 }
-
-.about-us__card-headings {
-  margin-bottom: 8px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 29px;
-  letter-spacing: 2px;
-  color: #333
-}
-
+/* ------------------------------ */
 /* about-working */
-
 .about-working__headings {
-  margin-bottom: 46px;
+  margin-bottom: 49px;
 }
 
 .about-working__steps {
-  margin-bottom: 45px;
+  margin-bottom: 47px;
 }
 
 .about-working__step-card {
-  padding-right: 870px;
   background-image: url(../img/Rectangle\ 17.jpg);
   background-size: 870px 460px;
-  background-position: right;
+  background-position: right bottom;
   background-repeat: no-repeat;
 }
 
@@ -406,20 +394,14 @@ ul {
 }
 
 .working-steps__item:not(:last-child) {
-  margin-right: 81px;
+  margin-right: 86px;
 }
 
 .worcking-steps__btn {
-  border: none;
-  padding: 0;
   margin: 0;
   background-color: #fff;
   color: #333;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 22px;
-  border: 1px solid #00000000;
+  font-size: 18px;
   transition-property:  border-bottom, color;
   transition-duration: .3s;
   transition-timing-function: ease;
@@ -444,34 +426,35 @@ ul {
 }
 
 .step-card__headings {
-  margin-bottom: 4px;
-  font-style: normal;
+  margin: 0;
+  margin-bottom: 6px;
   font-weight: bold;
   font-size: 24px;
   line-height: 32px;
-  letter-spacing: 2px;
   color: #333;
 }
 
 .step-card__description{
+  margin: 0;
   max-width: 758px;
-  margin-bottom: 46px;
-  font-style: normal;
-  font-weight: normal;
+  margin-bottom: 50px;
   font-size: 16px;
-  line-height: 33px;
-  letter-spacing: 1px;
+  line-height: 32px;
   color: #333;
 }
 
 .step-card__link{
+  padding: 20px 38px;
   display: inline-block;
 }
 
 .step-card__link_detail {
-  padding: 20px 44px;
+
   background-color: #FF9900;
   color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
   transition: background-color .2s ease;
 }
 .step-card__link_detail:hover {
@@ -485,9 +468,7 @@ ul {
 }
 
 .step-card__link_contract {
-  padding: 20px 38px;
   border: 1px solid #333333;
-  box-sizing: border-box;
   transition-property:  background-color, color;
   transition-duration: .3s;
   transition-timing-function: ease;
@@ -507,18 +488,15 @@ ul {
 
 .step-card__link +
 .step-card__link {
-  margin-left: 30px;
+  margin-left: 27px;
 }
 
 .step-card__image {
   max-width: 870px;
   max-height: 460px;
 }
-
+/* ------------------------------ */
 /* questions */
-.questions  {
-  margin-bottom: 96px;
-}
 .questions__headings {
   margin-bottom: 39px;
 }
@@ -533,12 +511,10 @@ details > summary::-webkit-details-marker {
 .questions__details {
   border-top: 1px solid #CACACA;
   border-bottom: 1px solid #CACACA;
-  font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 32px;
   color: #333333;
-  letter-spacing: 2px;
   transition-property: border, color;
   transition-duration: .3s;
   transition-timing-function: ease;
@@ -611,7 +587,7 @@ details > summary::-webkit-details-marker {
   margin-top: 20px;
   margin-bottom: 32px;
 }
-
+/* ------------------------------ */
 /* footer */
 
 .footer {
@@ -628,7 +604,7 @@ details > summary::-webkit-details-marker {
 }
 
 .footer__navigation {
-  margin-right: 101px;
+  margin-right: 115px;
 }
 
 .footer__logo {
@@ -637,10 +613,8 @@ details > summary::-webkit-details-marker {
 }
 
 .footer__list {
-  font-style: normal;
   font-weight: 600;
   font-size: 18px;
-  letter-spacing: 2px;
   color: #CACACA;
   transition: color .2s ease;
 }
@@ -655,7 +629,7 @@ details > summary::-webkit-details-marker {
 }
 
 .footer__naw {
-  margin-bottom: 93px;
+  margin-bottom: 97px;
 }
 
 .footer__social {
@@ -697,8 +671,7 @@ details > summary::-webkit-details-marker {
 }
 
 .footer__headings {
-  margin-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   color: #CACACA;
 }
 
@@ -728,13 +701,10 @@ details > summary::-webkit-details-marker {
 }
 
 .footer__info {
-  padding-top: 87px;
+  padding-top: 72px;
   max-width: 363px;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
-  line-height: 33px;
-  letter-spacing: 1px;
+  line-height: 32px;
   color: #CACACA;
 }
 
@@ -781,18 +751,15 @@ details > summary::-webkit-details-marker {
 .footer__textarea {
   resize: none;
   max-height: 150px;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
 }
 
 .footer__submit {
   margin-right: 22px;
-  margin-left: 2px;
   align-self: flex-start;
-  padding: 19px 53px;
-  letter-spacing: 1px;
+  padding: 19px 52px;
   border: none;
   background-color: #FF9900;
-  font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
@@ -812,8 +779,6 @@ details > summary::-webkit-details-marker {
 .footer__form-submits {
   display: flex;
   align-items: center;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 32px;
   color: #CACACA;
@@ -821,6 +786,7 @@ details > summary::-webkit-details-marker {
 .footer__label-checkbox {
   position: relative;
   padding-left: 18px;
+  padding-top: 3px;
   cursor: pointer;
 }
 
@@ -829,7 +795,7 @@ details > summary::-webkit-details-marker {
 }
 .checkbox + span {
   position: absolute;
-  top: 5px;
+  top: 12px;
   left: 0;
   width: 15px;
   height: 15px;
@@ -855,7 +821,7 @@ details > summary::-webkit-details-marker {
 
 @media (max-width: 1024px) {
   .section {
-    margin-bottom: 84px;
+    margin-bottom: 80px;
   }
 
   .headings {
@@ -865,25 +831,25 @@ details > summary::-webkit-details-marker {
   .container {
     padding: 0 50px;
   }
-
+  /* ------------------------------ */
+  /* Header */
   .header__container {
     padding-top: 26px;
-    padding-bottom: 26px;
+    padding-bottom: 22px;
   }
 
   .header__naw {
     display: none;
   }
 
-  .header__logo {
-    margin: 0;
-    margin-top: 4px;
-    margin-right: 11px;
+  .header__burger {
+    display: block;
+    padding-left: 0;
   }
 
-  .header__search {
+  .header__logo {
     margin: 0;
-    margin-top: 4px;
+    margin-right: 11px;
   }
 
   .header__logo-img {
@@ -891,37 +857,38 @@ details > summary::-webkit-details-marker {
     height: 48px;
   }
 
-  .header__burger {
-    display: block;
-    padding-left: 0;
-    padding-top: 10px;
+  .header__search {
+    margin: 0;
+  }
+  /* ------------------------------ */
+  /* Slider */
+  .slider-section {
+    padding: 160px 77px;
+    background-image: url(../img/low-angle-photo-of-balconies-2462015-1024.jpg);
   }
 
   .slider-section__heading {
-    font-size: 62px;
-    line-height: 71px;
-    letter-spacing: 5px;
+    font-size: 60px;
+    line-height: 73px;
     margin-bottom: 15px;
   }
+
   .slider-section__link {
     padding: 25px 39px;
   }
-  .slider-section {
-    padding-top: 167px;
-    padding-left: 77px;
-    padding-bottom: 160px;
-    background-image: url(../img/low-angle-photo-of-balconies-2462015-1024.jpg);
-  }
+
   .slider-section__info {
     font-size: 20px;
-    letter-spacing: 1.5px;
     line-height: 25px;
-    margin-bottom: 57px;
+    margin-bottom: 59px;
   }
+  /* ------------------------------ */
+  /* about-us */
   .about-us__content {
-    letter-spacing: 1px;
-    margin-bottom: 60px;
+    margin: 0;
+    margin-bottom: 62px;
   }
+
   .about-us__details {
     flex-direction: column ;
   }
@@ -943,60 +910,72 @@ details > summary::-webkit-details-marker {
     padding-left: 316px;
     background-position: left 77px top 63px;
   }
+  /* ------------------------------ */
+  /* about-working */
   .about-working__headings {
-    margin-bottom: 44px;
+    margin-bottom: 47px;
   }
+
   .about-working__steps {
-    margin-bottom: 50px;
+    margin-bottom: 53px;
   }
+
   .step-card__headings {
     margin-bottom: 6px;
   }
+
   .step-card__description {
     line-height: 32px;
+    margin-bottom: 25px;
   }
-  .step-card__description {
-    margin-bottom: 24px;
-  }
+
   .step-card__image {
     max-width: 437px;
     max-height: 689px;
   }
+  /* ------------------------------ */
+  /* questions */
   .questions {
     margin-bottom: 79px;
   }
+
   .questions__headings {
     margin-bottom: 29px;
   }
+
   .questions__details {
-    letter-spacing: 1.6px;
     font-size: 20px;
   }
+
   .questions__summary_svg {
     margin-left: 100px;
   }
+  /* ------------------------------ */
+  /* footer */
+  .footer__container  {
+    padding: 0 49px;
+  }
+
   .footer__info {
     display: none;
   }
-  .footer__list {
-    letter-spacing: 1px;
-  }
+
   .footer__naw {
     margin-bottom: 97px;
   }
+
   .footer__navigation {
-    margin-right: 140px;
+    margin-right: 133px;
   }
+
   .footer__headings {
-    margin-top: 6px;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
+
   .footer__submit {
     padding: 19px 38px;
   }
-  .footer__label-checkbox {
-    letter-spacing: .5px;
-  }
+
   .about-working__step-card {
     padding-right: 487px;
     background-size: 437px 689px;
@@ -1005,18 +984,27 @@ details > summary::-webkit-details-marker {
 }
 
 @media (max-width: 768px) {
+  .section {
+    margin-bottom: 79px;
+  }
+  /* ------------------------------ */
+  /* Header */
   .header__container {
-    padding-top: 6px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 7px;
   }
   .header__burger {
-    padding-top: 5px;
+    padding-top: 2px;
   }
+  /* ------------------------------ */
+  /* Slider */
   .slider-section {
-    padding: 165px 40px 160px;
+    padding: 160px 40px;
+    background-image: url("../img/low-angle-photo-of-balconies-768.jpg");
   }
 
   .slider-section__heading {
+    margin-bottom: 18px;
     line-height: 61px;
     font-size: 50px;
   }
@@ -1025,34 +1013,50 @@ details > summary::-webkit-details-marker {
     font-size: 18px;
     line-height: 22px;
   }
-
+  /* ------------------------------ */
+  /* about-us */
+  .about-us__content {
+    margin-bottom: 60px;
+  }
   .about-us-card__info {
     padding: 34px 40px;
-  }
-
-  .about-us-card__description {
-     margin-right: 47px;
   }
 
   .about-us__card_main {
     padding-top: 454px;
   }
 
-  .about-us__card {
-    background-size: 144px 99px;
-    padding: 35px 40px 35px 170px;
-    background-position: left 23px top 67px;
+  .about-us-card__detail-link {
+    margin-left: 47px;
+    padding: 18px 35px;
   }
 
+  .about-us__content {
+    margin-bottom: 59px;
+  }
+
+  .about-us__card {
+    background-size: 144px 99px;
+    padding: 35px 40px 34px 169px;
+    background-position: left 23px top 67px;
+  }
+  /* ------------------------------ */
+  /* about-working */
   .working-steps__list {
     justify-content: space-between;
   }
+
   .about-working__headings {
-    margin-bottom: 40px;
+    margin-bottom: 46px;
   }
+
+  .about-working__steps {
+    margin-bottom: 51px;
+  }
+
   .about-working__step-card {
     padding: 0;
-    padding-top: 322px;
+    padding-top: 324px;
     background-image: url(../img/Rectangle18-768.jpg);
     background-size:  668px 284px;
     background-position: top;
@@ -1061,6 +1065,16 @@ details > summary::-webkit-details-marker {
   .step-card__description {
     line-height: 32px;
     margin-bottom: 25px;
+  }
+  /* ------------------------------ */
+  /* questions */
+  .questions {
+    margin-bottom: 80px;
+  }
+
+  .questions__headings {
+    margin-bottom: 34px;
+    line-height: 59px;
   }
 
   .questions__details {
@@ -1073,31 +1087,31 @@ details > summary::-webkit-details-marker {
   }
 
   .questions__summary_svg {
-    margin-left: 20px;
+    margin-left: 45px;
   }
-
-  .questions {
-    margin-bottom: 80px;
-  }
-  .questions__headings {
-    margin-bottom: 31px;
-  }
+  /* ------------------------------ */
+  /* footer */
   .footer__naw {
     display: none;
   }
+
   .footer__textarea {
     margin-bottom: 32px;
   }
+
   .footer__container {
     flex-direction: column-reverse;
   }
+
   .footer__logo {
     margin-bottom: 11px;
   }
+
   .footer__form {
     margin-bottom: 49px;
     max-width: 540px;
   }
+
   .footer__headings {
     margin-bottom: 23px;
   }
@@ -1116,63 +1130,72 @@ details > summary::-webkit-details-marker {
     margin-bottom: 20px;
     font-size: 24px;
     line-height: 29px;
-    letter-spacing: 1px;
+  }
+  /* ------------------------------ */
+  /* Header */
+  .header__container {
+    padding-top: 17px;
+    padding-bottom: 13px;
   }
 
-  .header__container {
-    padding-top: 14px;
-    padding-bottom: 10px;
+  .header__burger {
+    padding-top: 5px;
   }
 
   .header__logo-img {
     width: 110px;
     height: 35px;
   }
-
+  /* ------------------------------ */
+  /* Slider */
   .slider-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 308px;
-    padding: 60px 21px 60px 22px;
+    padding: 60px 22px;
   }
 
   .slider-section__heading {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: .2px;
   }
 
   .slider-section__info {
     font-size: 12px;
     line-height: 15px;
     text-align: center;
-    margin-bottom: 32px;
-    letter-spacing: 1px;
+    margin-bottom: 34px;
   }
 
   .slider-section__link {
-    padding: 12px 26px;
+    padding: 13px 28px;
     font-size: 12px;
     line-height: 15px;
   }
 
   .slider-section__list {
-    bottom: 14px;
+    bottom: 15px;
     left: calc(50% - 35px);
   }
+
   .slider-section__item {
     width: 10px;
     height: 10px;
   }
+  /* ------------------------------ */
+  /* about-us */
+  .about-us {
+    margin-bottom: 50px;
+  }
+
   .about-us__content {
-    margin-bottom: 13px;
+    margin-bottom: 14px;
     font-size: 14px;
     line-height: 28px;
-    letter-spacing: .9px;
   }
 
   .about-us__card_main {
@@ -1193,10 +1216,13 @@ details > summary::-webkit-details-marker {
 
   .about-us-card__description {
     margin: 0;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 28px;
   }
 
   .about-us-card__detail-link {
+    margin: 0;
     padding: 11px 42px;
     color: #FF9900;
     font-weight: bold;
@@ -1211,37 +1237,28 @@ details > summary::-webkit-details-marker {
     background-position: left top;
     border: none;
   }
+
   .about-us__side-cards > * + * {
-    margin-top: 30px;
+    margin-top: 31px;
   }
+
   .about-us__card-url-one {
     background-image: url(../img/Frame\ 39.svg);
   }
+
   .about-us__card-url-two {
     background-image: url(../img/Frame\ 38.svg);
   }
+
   .about-us__card-headings {
+    margin-bottom: 5px;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
   }
-
-  .about-us-card__description {
-    margin-bottom: 10px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 28px;
-    letter-spacing: 1px;
-  }
-
-  .about-working__headings {
-    margin-bottom: 16px;
-  }
-  .about-us {
-    margin-bottom: 50px;
-  }
+/* ------------------------------ */
+/* about-working */
   .worcking-steps__btn {
     padding: 0;
     font-style: normal;
@@ -1258,48 +1275,48 @@ details > summary::-webkit-details-marker {
     margin-bottom: 16px;
   }
   .about-working__step-card {
-    padding-top: 178px;
+    padding-top: 176px;
     background-image: url(../img/Rectangle18-320.png);
     background-size: 290px 160px;
     background-position: top;
 }
   .step-card__headings {
+    margin-bottom: 9px;
+    font-weight: 500;
     font-size: 18px;
     line-height: 32px;
-    letter-spacing: 1px;
   }
 
   .step-card__description {
     font-size: 14px;
     line-height: 28px;
-    margin-bottom: 16px;
-    letter-spacing: .9px;
+    margin-bottom: 14px;
   }
 
   .step-card__link {
-    padding: 11px 30px 14px;
+    padding: 12px 31px 14px;
     font-size: 12px;
     line-height: 15px;
   }
 
   .step-card__link_detail {
-    padding-left: 48px;
-    padding-right: 48px;
+    padding-left: 44px;
+    padding-right: 44px;
   }
-  .step-card__link_contract {
-    padding: 11px 33px 14px;
-  }
+
   .step-card__link + .step-card__link {
-    margin-left: 6px;
+    margin-left: 5px;
   }
+  /* ------------------------------ */
+  /* questions */
   .questions__headings {
     margin-bottom: 15px;
   }
   .questions__summary {
     padding: 30px  0;
+    font-weight: 500;
     font-size: 14px;
     line-height: 24px;
-    letter-spacing: .9px;
   }
 
   .questions__summary_svg {
@@ -1307,31 +1324,19 @@ details > summary::-webkit-details-marker {
     width: 30px;
     margin-left: 14px;
   }
-
+  /* ------------------------------ */
+  /* footer */
   .footer {
-    padding: 30px 0;
-  }
-  .footer__textarea {
-    margin-bottom: 23px;
-  }
-  .footer__input::-webkit-input-placeholder {
-    color: #CACACA;
-  }
-
-  .footer__input::-moz-placeholder {
-    color: #CACACA;
-  }
-
-  .footer__input:-ms-input-placeholder {
-    color: #CACACA;
-  }
-
-  .footer__input::-ms-input-placeholder {
-    color: #CACACA;
+    padding: 33px 0;
   }
 
   .footer__input::placeholder {
-    color: #CACACA;
+    font-size: 14px;
+    line-height: 32px;
+  }
+
+  .footer__textarea {
+    margin-bottom: 25px;
   }
 
   .footer__form-submits {
@@ -1341,13 +1346,24 @@ details > summary::-webkit-details-marker {
   .footer__submit {
     margin: 0 auto;
     margin-bottom: 11px;
-    padding: 10px 27px 10px 27px;
+    padding: 13px 28px;
+    font-weight: bold;
     font-size: 12px;
+    line-height: 15px;
   }
+
   .footer__label-checkbox {
-    letter-spacing: .8px;
+    padding-top: 0;
     font-size: 16px;
   }
+
+  .checkbox + span {
+    top: 9px;
+    left: -1px;
+    width: 14px;
+    height: 14px;
+  }
+
   .footer__form {
     margin-bottom: 16px;
     padding-bottom: 16px;
@@ -1362,16 +1378,18 @@ details > summary::-webkit-details-marker {
   }
 
   .footer__logo {
-    margin-bottom: 9px;
+    margin-bottom: 12px;
   }
 
   .footer__logo-img {
     width: 131px;
     height: 42px;
   }
+
   .footer__social-item:not(:last-child) {
     margin-right: 15px;
   }
+
   .footer__social-icon {
     width: 40px;
     height: 40px;
