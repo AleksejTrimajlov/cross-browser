@@ -201,7 +201,7 @@ ul {
 }
 /* ------------------------------ */
 /* Slider */
-.slider-section {
+.preview-section {
   position: relative;
   padding: 100px 80px;
   background-image: url("../img/low-angle-photo-of-balconies-2462015.jpg");
@@ -210,7 +210,7 @@ ul {
   background-position: center;
 }
 
-.slider-section__heading {
+.preview-section__heading {
   margin: 0;
   margin-bottom: 25px;
   max-width: 837px;
@@ -221,7 +221,7 @@ ul {
   letter-spacing: .9px;
 }
 
-.slider-section__info {
+.preview-section__info {
   margin: 0;
   margin-bottom: 90px;
   max-width: 790px;
@@ -231,7 +231,7 @@ ul {
   line-height: 29px;
 }
 
-.slider-section__link {
+.preview-section__link {
   display: inline-block;
   padding: 24px 39px;
   background-color: #FF9900;
@@ -243,38 +243,38 @@ ul {
   transition: background-color .2s ease;
 }
 
-.slider-section__link:hover {
+.preview-section__link:hover {
   background-color: #ff9900a7;
 }
 
-.slider-section__link:focus {
+.preview-section__link:focus {
   background-color: #FF9900a7;
 }
 
-.slider-section__link:active {
+.preview-section__link:active {
   background-color: #E1670E;
 }
 
-.slider-section__list {
+.preview-section__list {
   display: flex;
   position: absolute;
   bottom: 29px;
   left: calc(50% - 42px);
 }
 
-.slider-section__item {
+.preview-section__item {
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background-color: #ffffffa4;
 }
 
-.slider-section__item_activ {
+.preview-section__item_activ {
   background-color: #fff;
 }
 
-.slider-section__item +
-.slider-section__item {
+.preview-section__item +
+.preview-section__item {
  margin-left: 20px;
 }
 /* ------------------------------ */
@@ -301,6 +301,7 @@ ul {
   margin: 0;
   margin-bottom: 8px;
   font-size: 24px;
+  font-weight: bold;
   line-height: 29px;
   color: #333
 }
@@ -507,7 +508,7 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 
-.questions__details {
+.questions__item {
   border-top: 1px solid #CACACA;
   border-bottom: 1px solid #CACACA;
   font-weight: bold;
@@ -518,23 +519,23 @@ details > summary::-webkit-details-marker {
   transition-duration: .3s;
   transition-timing-function: ease;
 }
-.questions__details:hover {
+.questions__item:hover {
   color: #FF9900;
   border-color: #FF9900;
 }
-.questions__details:focus {
+.questions__item:focus {
   color: #FF9900;
   border-color: #FF9900;
 }
-.questions__details:active {
+.questions__item:active {
   color: #333333;
   border-color: #CACACA;
 }
-.questions__details +
-.questions__details {
+.questions__item +
+.questions__item {
   border-top: none;
 }
-.questions__summary {
+.questions__details-question {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -554,22 +555,22 @@ details > summary::-webkit-details-marker {
   transform-origin: center;
   transition: fill, transform .2s ease;
 }
-.questions__details:hover .questions__ellipse {
+.questions__item:hover .questions__ellipse {
   fill: #FF9900;
 }
-.questions__details:focus .questions__ellipse {
+.questions__item:focus .questions__ellipse {
   fill: #FF9900;
 }
-.questions__details:active .questions__ellipse {
+.questions__item:active .questions__ellipse {
   fill: #ECECEC;
 }
-.questions__details:hover .questions__path {
+.questions__item:hover .questions__path {
   fill: #FFFFFF;
 }
-.questions__details:focus .questions__path {
+.questions__item:focus .questions__path {
   fill: #FFFFFF;
 }
-.questions__details:active .questions__path {
+.questions__item:active .questions__path {
   fill: #666666;
   transform: rotate(45deg);
 }
@@ -861,22 +862,22 @@ details > summary::-webkit-details-marker {
   }
   /* ------------------------------ */
   /* Slider */
-  .slider-section {
+  .preview-section {
     padding: 160px 77px;
     background-image: url(../img/low-angle-photo-of-balconies-2462015-1024.jpg);
   }
 
-  .slider-section__heading {
+  .preview-section__heading {
     font-size: 60px;
     line-height: 73px;
     margin-bottom: 15px;
   }
 
-  .slider-section__link {
+  .preview-section__link {
     padding: 25px 39px;
   }
 
-  .slider-section__info {
+  .preview-section__info {
     font-size: 20px;
     line-height: 25px;
     margin-bottom: 59px;
@@ -942,7 +943,7 @@ details > summary::-webkit-details-marker {
     margin-bottom: 29px;
   }
 
-  .questions__details {
+  .questions__item {
     font-size: 20px;
   }
 
@@ -996,18 +997,18 @@ details > summary::-webkit-details-marker {
   }
   /* ------------------------------ */
   /* Slider */
-  .slider-section {
+  .preview-section {
     padding: 160px 40px;
     background-image: url("../img/low-angle-photo-of-balconies-768.jpg");
   }
 
-  .slider-section__heading {
+  .preview-section__heading {
     margin-bottom: 18px;
     line-height: 61px;
     font-size: 50px;
   }
 
-  .slider-section__info {
+  .preview-section__info {
     font-size: 18px;
     line-height: 22px;
   }
@@ -1075,12 +1076,12 @@ details > summary::-webkit-details-marker {
     line-height: 59px;
   }
 
-  .questions__details {
+  .questions__item {
     font-size: 20px;
     line-height: 32px;
   }
 
-  .questions__summary {
+  .questions__details-question {
     padding: 30px 0;
   }
 
@@ -1146,7 +1147,7 @@ details > summary::-webkit-details-marker {
   }
   /* ------------------------------ */
   /* Slider */
-  .slider-section {
+  .preview-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1154,7 +1155,7 @@ details > summary::-webkit-details-marker {
     padding: 60px 22px;
   }
 
-  .slider-section__heading {
+  .preview-section__heading {
     margin-bottom: 8px;
     font-size: 20px;
     line-height: 24px;
@@ -1162,25 +1163,25 @@ details > summary::-webkit-details-marker {
     letter-spacing: .2px;
   }
 
-  .slider-section__info {
+  .preview-section__info {
     font-size: 12px;
     line-height: 15px;
     text-align: center;
     margin-bottom: 34px;
   }
 
-  .slider-section__link {
+  .preview-section__link {
     padding: 13px 28px;
     font-size: 12px;
     line-height: 15px;
   }
 
-  .slider-section__list {
+  .preview-section__list {
     bottom: 15px;
     left: calc(50% - 35px);
   }
 
-  .slider-section__item {
+  .preview-section__item {
     width: 10px;
     height: 10px;
   }
@@ -1310,7 +1311,7 @@ details > summary::-webkit-details-marker {
   .questions__headings {
     margin-bottom: 15px;
   }
-  .questions__summary {
+  .questions__details-question {
     padding: 30px  0;
     font-weight: 500;
     font-size: 14px;

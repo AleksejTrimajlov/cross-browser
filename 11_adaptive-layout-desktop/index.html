@@ -18,7 +18,7 @@
           <rect y="20" width="30" height="3" fill="#333333"/>
         </svg>
       </button>
-      <a href="" class="header__logo">
+      <a class="header__logo" href="">
         <img class="header__logo-img" src="img/Logo.png" alt="Евклид Проектные системы">
       </a>
       <nav class="header__naw">
@@ -42,14 +42,14 @@
       </nav>
       <div class="header__search">
         <button class="header__search-btn btn">
-          <svg class="header__search-btn btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect class="header__search-icon-rect" width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)" fill="#333333"/>
             <path class="header__search-icon-path" d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="#333333" stroke-width="2"/>
           </svg>
         </button>
       </div>
-      <article class="search-active-container">
-        <form class="search-active-container__form" action="">
+      <div class="search-active-container">
+        <form class="search-active-container__form" action="#">
           <input class="search-active-container__input" type="text" placeholder="Что будем искать?">
           <button class="header__search-btn btn" type="submit">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +57,7 @@
               <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="#FF9900" stroke-width="2"/>
             </svg>
           </button>
-          <button class="search-active-container__close">
+          <button class="search-active-container__close btn">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="8.95386" y="7.30435" width="11.6645" height="2.33291" transform="rotate(45 8.95386 7.30435)" fill="#999999"/>
               <rect x="7.30432" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30432 15.5524)" fill="#999999"/>
@@ -65,20 +65,20 @@
             </svg>
           </button>
         </form>
-      </article>
+      </div>
     </div>
   </header>
 
   <main>
     <div class="container">
-      <section class="slider-section section">
-        <h1 class="slider-section__heading">Проектные решения любой сложности</h1>
-        <p class="slider-section__info">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>
-        <a class="slider-section__link" href="">Заказать расчёт</a>
-        <ul class="slider-section__list">
-          <li class="slider-section__item slider-section__item_activ"></li>
-          <li class="slider-section__item"></li>
-          <li class="slider-section__item"></li>
+      <section class="preview-section section">
+        <h1 class="preview-section__heading">Проектные решения любой сложности</h1>
+        <p class="preview-section__info">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>
+        <a class="preview-section__link" href="">Заказать расчёт</a>
+        <ul class="preview-section__list">
+          <li class="preview-section__item preview-section__item_activ"></li>
+          <li class="preview-section__item"></li>
+          <li class="preview-section__item"></li>
         </ul>
       </section>
 
@@ -88,27 +88,27 @@
           Также как перспективное планирование создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса экспериментов, поражающих по своей масштабности и грандиозности. А также диаграммы связей могут быть описаны максимально подробно. Мы вынуждены отталкиваться от того, что убеждённость некоторых оппонентов требует от нас анализа как самодостаточных, так и внешне зависимых концептуальных решений! Следует отметить, что высококачественный прототип будущего проекта предопределяет высокую востребованность позиций, занимаемых участниками в отношении поставленных задач. Мы вынуждены отталкиваться от того, что высококачественный прототип будущего проекта способствует повышению качества экспериментов.
         </p>
         <div class="about-us__details">
-          <article class="about-us__card_main about-us-card">
+          <div class="about-us__card_main about-us-card">
             <div class="about-us-card__info">
               <p class="about-us-card__description">
                 Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации новых принципов.
               </p>
               <a class="about-us-card__detail-link" href="">Подробнее</a>
             </div>
-          </article>
+          </div>
           <div class="about-us__side-cards">
-            <article class="about-us__card about-us__card-url-one">
-              <h3 class="about-us__card-headings">Консультация с широким активом</h3>
+            <div class="about-us__card about-us__card-url-one">
+              <p class="about-us__card-headings">Консультация с широким активом</p>
               <p class="about-us-card__description">
                 А также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для как самодостаточных, так и внешне зависимых концептуальных решений.
               </p>
-            </article>
-            <article class="about-us__card about-us__card-url-two ">
-              <h3 class="about-us__card-headings">В своём стремлении повысить </h3>
+            </div>
+            <div class="about-us__card about-us__card-url-two ">
+              <p class="about-us__card-headings">В своём стремлении повысить </p>
               <p class="about-us-card__description">
                 Качество жизни, они забывают, что сплочённость команды профессионалов представляет собой интересный эксперимент проверки прогресса профессионального сообщества.
               </p>
-            </article>
+            </div>
           </div>
         </div>
       </section>
@@ -132,7 +132,7 @@
           </ul>
         </div>
 
-        <article class="about-working__step-card step-card">
+        <div class="about-working__step-card step-card">
           <div class="step-card__container">
             <h3 class="step-card__headings">Проводим консультацию</h3>
             <p class="step-card__description">
@@ -141,64 +141,58 @@
             <a class="step-card__link step-card__link_detail" href="">Подробнее</a>
             <a class="step-card__link step-card__link_contract" href="">Договор</a>
           </div>
-        </article>
+        </div>
       </section>
 
       <section class="questions section">
         <h2 class="questions__headings headings">Часто задаваемые вопросы</h2>
-        <details class="questions__details">
-          <summary class="questions__summary">
-            Из чего формируется конечная стоимость проекта?
-            <svg class="questions__summary_svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse class="questions__ellipse" cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
-              <path class="questions__path" fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
-            </svg>
-          </summary>
-          <div class="questions__answer">
-            <p>
-              Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но высококачественный прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений, что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь, должны быть указаны как претенденты на роль ключевых факторов.
-            </p>
-            <p>
-              Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу. Явные признаки победы институционализации набирают популярность среди определенных слоев населения, а значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в исключительно положительном свете.
-            </p>
-          </div>
-        </details>
-        <details class="questions__details">
-          <summary class="questions__summary">
-            У меня есть свой проект. Сможем ли мы его доработать / реализовать?
-            <svg class="questions__summary_svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse class="questions__ellipse" cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
-              <path class="questions__path" fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
-            </svg>
-          </summary>
-        </details>
-        <details class="questions__details">
-          <summary class="questions__summary">
-            Я выбираю между разными компаниями. В чём ваше отличие?
-            <svg class="questions__summary_svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse class="questions__ellipse" cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
-              <path class="questions__path" fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
-            </svg>
-          </summary>
-        </details>
-        <details class="questions__details">
-          <summary class="questions__summary">
-            Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?
-            <svg class="questions__summary_svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse class="questions__ellipse" cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
-              <path class="questions__path" fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
-            </svg>
-          </summary>
-        </details>
-        <details class="questions__details">
-          <summary class="questions__summary">
-            Могу ли я вернуть деньги на каком-либо из этапов работ?
-            <svg class="questions__summary_svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse class="questions__ellipse" cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
-              <path class="questions__path" fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
-            </svg>
-          </summary>
-        </details>
+        <ul class="questions__list">
+          <li class="questions__item">
+            <div class="questions__details-question">
+              Из чего формируется конечная стоимость проекта?
+              <svg class="questions__summary_svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse class="questions__ellipse" cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
+                <path class="questions__path" fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
+              </svg>
+            </div>
+          </li>
+          <li class="questions__item">
+            <div class="questions__details-question">
+              У меня есть свой проект. Сможем ли мы его доработать / реализовать?
+              <svg class="questions__summary_svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse class="questions__ellipse" cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
+                <path class="questions__path" fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
+              </svg>
+            </div>
+          </li>
+          <li class="questions__item">
+            <div class="questions__details-question">
+              Я выбираю между разными компаниями. В чём ваше отличие?
+              <svg class="questions__summary_svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse class="questions__ellipse" cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
+                <path class="questions__path" fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
+              </svg>
+            </div>
+          </li>
+          <li class="questions__item">
+            <div class="questions__details-question">
+              Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?
+              <svg class="questions__summary_svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse class="questions__ellipse" cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
+                <path class="questions__path" fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
+              </svg>
+            </div>
+          </li>
+          <li class="questions__item">
+            <div class="questions__details-question">
+              Могу ли я вернуть деньги на каком-либо из этапов работ?
+              <svg class="questions__summary_svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse class="questions__ellipse" cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
+                <path class="questions__path" fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
+              </svg>
+            </div>
+          </li>
+        </ul>
       </section>
     </div>
   </main>
