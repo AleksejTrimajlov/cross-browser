@@ -254,29 +254,6 @@ ul {
 .preview-section__link:active {
   background-color: #E1670E;
 }
-
-.preview-section__list {
-  display: flex;
-  position: absolute;
-  bottom: 29px;
-  left: calc(50% - 42px);
-}
-
-.preview-section__item {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #ffffffa4;
-}
-
-.preview-section__item_activ {
-  background-color: #fff;
-}
-
-.preview-section__item +
-.preview-section__item {
- margin-left: 20px;
-}
 /* ------------------------------ */
 /* about-us */
 .about-us__content {
@@ -511,13 +488,17 @@ details > summary::-webkit-details-marker {
 .questions__item {
   border-top: 1px solid #CACACA;
   border-bottom: 1px solid #CACACA;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 32px;
   color: #333333;
   transition-property: border, color;
   transition-duration: .3s;
   transition-timing-function: ease;
+}
+.questions__details-headings {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
 }
 .questions__item:hover {
   color: #FF9900;
@@ -628,7 +609,7 @@ details > summary::-webkit-details-marker {
   color: #E1670E;
 }
 
-.footer__naw {
+.footer__nav {
   margin-bottom: 97px;
 }
 
@@ -701,7 +682,8 @@ details > summary::-webkit-details-marker {
 }
 
 .footer__info {
-  padding-top: 72px;
+  margin: 0;
+  padding-top: 88px;
   max-width: 363px;
   font-size: 16px;
   line-height: 32px;
@@ -807,10 +789,11 @@ details > summary::-webkit-details-marker {
   background-image: url('../img/Rectangle\ 44.svg');
   background-size: contain;
   background-repeat: no-repeat;
+  background-size: auto;
   position: absolute;
-  top: 0;
+  top: 1px;
   right: 0;
-  left: 0;
+  left: 2px;
   bottom: 0;
   opacity: 0;
   transition: opacity .3s ease-in-out;
@@ -943,7 +926,7 @@ details > summary::-webkit-details-marker {
     margin-bottom: 29px;
   }
 
-  .questions__item {
+  .questions__details-headings {
     font-size: 20px;
   }
 
@@ -956,7 +939,7 @@ details > summary::-webkit-details-marker {
     display: none;
   }
 
-  .footer__naw {
+  .footer__nav {
     margin-bottom: 97px;
   }
 
@@ -1030,10 +1013,6 @@ details > summary::-webkit-details-marker {
     padding: 18px 35px;
   }
 
-  .about-us__content {
-    margin-bottom: 59px;
-  }
-
   .about-us__card {
     background-size: 144px 99px;
     padding: 35px 40px 34px 169px;
@@ -1076,7 +1055,7 @@ details > summary::-webkit-details-marker {
     line-height: 59px;
   }
 
-  .questions__item {
+  .questions__details-headings {
     font-size: 20px;
     line-height: 32px;
   }
@@ -1090,12 +1069,12 @@ details > summary::-webkit-details-marker {
   }
   /* ------------------------------ */
   /* footer */
-  .footer__naw {
+  .footer__nav {
     display: none;
   }
 
   .footer__textarea {
-    margin-bottom: 32px;
+    margin-bottom: 31 px;
   }
 
   .footer__container {
@@ -1174,16 +1153,6 @@ details > summary::-webkit-details-marker {
     padding: 13px 28px;
     font-size: 12px;
     line-height: 15px;
-  }
-
-  .preview-section__list {
-    bottom: 15px;
-    left: calc(50% - 35px);
-  }
-
-  .preview-section__item {
-    width: 10px;
-    height: 10px;
   }
   /* ------------------------------ */
   /* about-us */
@@ -1311,8 +1280,12 @@ details > summary::-webkit-details-marker {
   .questions__headings {
     margin-bottom: 15px;
   }
+
   .questions__details-question {
-    padding: 30px  0;
+  padding: 30px  0;
+  }
+
+  .questions__details-headings {
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
