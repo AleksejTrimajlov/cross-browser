@@ -830,63 +830,6 @@ details > summary {
 .checkbox:checked + span::before {
   opacity: 1;
 }
-
-@media (min-width: 1025px) and (max-width: 1860px) {
-  .container {
-    max-width: 95vw;
-  }
-  /* ------------------------------ */
-  /* Header */
-  .header__list-item:not(:last-child) {
-    margin-right: 5vw;
-  }
-  /* ------------------------------ */
-  /* about-us */
-  .about-us__details {
-    flex-wrap: wrap;
-  }
-  .about-us__card_main {
-    margin: auto;
-    flex-grow: 1;
-    padding-top: 426px;
-    max-width: 880px;
-    min-width: 730px;
-  }
-  .about-us__card {
-    padding: 65px clamp(20px, 1vw, 117px);
-    padding-left: clamp(220px, 15vw, 300px);
-    background-position: left clamp(30px, 1.5vw, 60px) top 65px
-  }
-  .about-us__details > * + * {
-    flex-grow: 1;
-    max-width: 880px;
-    margin: auto;
-  }
-  /* ------------------------------ */
-  /* about-working */
-  .about-working__step-card {
-    background-size: clamp(100px, 45vw, 870px) 460px;
-    background-position: right;
-  }
-  .step-card__description {
-    max-width: clamp(100px, 50vw, 758px);
-  }
-  /* ------------------------------ */
-  /* footer */
-  .footer__navigation {
-    margin-right: clamp(25px, 2.5vw, 115px);
-  }
-  .footer__info {
-    padding-top: clamp(77px, 8vw, 88px);
-    max-width: clamp(250px, 24vw, 363px) ;
-  }
-  .footer__form {
-    max-width: clamp(408px, 40vw, 570px) ;
-  }
-  .footer__form-submits {
-    flex-wrap: wrap;
-  }
-}
 @media (min-width: 2020px) {
   :root {
     font-size: .7vw;
@@ -1016,6 +959,60 @@ details > summary {
   .footer__logo-img {
     width: clamp( 224px, 7vw, 300px);
     height: clamp( 72px, 9vh, 120px);
+  }
+}
+@media (min-width: 1025px) and (max-width: 1860px) {
+  .container {
+    max-width: 95vw;
+  }
+  /* ------------------------------ */
+  /* Header */
+  .header__list-item:not(:last-child) {
+    margin-right: 5vw;
+  }
+  /* ------------------------------ */
+  /* about-us */
+  .about-us__details {
+    flex-wrap: wrap;
+  }
+  .about-us__card_main {
+    margin: 0 auto;
+    flex-grow: 0;
+    padding-top: 426px;
+    width: clamp(720px, 45vw, 880px);
+  }
+  .about-us__card {
+    padding: 65px clamp(20px, 1vw, 117px);
+    padding-left: clamp(220px, 15vw, 300px);
+    background-position: left clamp(30px, 1.5vw, 60px) top 65px
+  }
+  .about-us__details > * + * {
+    width: clamp(720px, 45vw, 880px);
+    margin: auto;
+  }
+  /* ------------------------------ */
+  /* about-working */
+  .about-working__step-card {
+    background-size: clamp(100px, 45vw, 870px) 460px;
+    background-position: right;
+  }
+  .step-card__description {
+    max-width: clamp(100px, 50vw, 758px);
+  }
+  /* ------------------------------ */
+  /* footer */
+  .footer__navigation {
+    margin-right: clamp(25px, 2.5vw, 115px);
+  }
+  .footer__info {
+    padding-top: clamp(77px, 8vw, 88px);
+    max-width: clamp(250px, 24vw, 363px) ;
+  }
+  .footer__form {
+    max-width: clamp(408px, 40vw, 570px) ;
+  }
+  .footer__form-submits {
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 1024px) {
