@@ -8,17 +8,23 @@ window.addEventListener('DOMContentLoaded', function() {
 
   document.querySelector('.header__burger').addEventListener('click', function() {
     document.querySelector('.burger-menu').classList.toggle('is-activ');
-    document.querySelector('body').classList.toggle('lock');
+    document.querySelector('.header__burger').classList.toggle('active');
   });
 
   document.querySelectorAll('.worcking-steps__btn').forEach(function(tabsBtn) {
+
     tabsBtn.addEventListener('click', function(event) {
+
       const path = event.currentTarget.dataset.path;
 
       document.querySelectorAll('.about-working__step-card').forEach(function(tabContent) {
         tabContent.classList.add('hidden');
       });
+      document.querySelectorAll('.worcking-steps__btn').forEach(function(allTab) {
+        allTab.classList.remove('active');
+      });
       document.querySelector(`[data-target="${path}"]`).classList.remove('hidden');
+      event.currentTarget.classList.add('active');
     });
   });
 });
@@ -33,7 +39,7 @@ var swiper = new Swiper(".mySwiper", {
 
 $( function() {
   $( "#accordion" ).accordion({
-    active: 7 ,
+    collapsible: true,
     heightStyle: "content"
   });
 } );

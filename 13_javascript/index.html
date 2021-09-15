@@ -6,23 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/normoalize.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script src="js/jquery/script/jquery-1.12.4.js"></script>
+  <script src="js/jquery/script/jquery-ui.js"></script>
+
   <link rel="stylesheet" href="css/style.css">
   <title>Евклид Проектные системы</title>
 </head>
 <body>
   <header class="header">
     <div class="container header__container">
-      <button class="header__burger">
-        <svg width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="30" height="3" fill="#333333"/>
-          <rect y="10" width="30" height="3" fill="#333333"/>
-          <rect y="20" width="30" height="3" fill="#333333"/>
-        </svg>
-      </button>
+      <div class="header__burger">
+          <span></span>
+      </div>
       <a class="header__logo" href="">
         <img class="header__logo-img" src="img/Logo.png" alt="Евклид Проектные системы">
       </a>
@@ -65,7 +61,6 @@
             </li>
           </ul>
         </nav>
-        <div class="burger-menu_overlay"></div>
       </div>
       <div class="header__search">
         <button class="header__search-btn btn">
@@ -101,28 +96,21 @@
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="preview-section">
-                <h1 class="preview-section__heading">Проектные решения любой сложности</h1>
-                <p class="preview-section__info">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>
-                <a class="preview-section__link" href="">Заказать расчёт</a>
-              </div>
+              <div class="swiper-slide__content swiper-slide__one"></div>
             </div>
             <div class="swiper-slide">
-              <div class="preview-section">
-                <h1 class="preview-section__heading">Проектные решения любой сложности</h1>
-                <p class="preview-section__info">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>
-                <a class="preview-section__link" href="">Заказать расчёт</a>
-              </div>
+              <div class="swiper-slide__content swiper-slide__two"></div>
             </div>
             <div class="swiper-slide">
-              <div class="preview-section">
-                <h1 class="preview-section__heading">Проектные решения любой сложности</h1>
-                <p class="preview-section__info">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>
-                <a class="preview-section__link" href="">Заказать расчёт</a>
-              </div>
+              <div class="swiper-slide__content swiper-slide__three"></div>
             </div>
           </div>
           <div class="swiper-pagination"></div>
+        </div>
+        <div class="preview-section">
+          <h1 class="preview-section__heading">Проектные решения любой сложности</h1>
+          <p class="preview-section__info">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>
+          <a class="preview-section__link" href="">Заказать расчёт</a>
         </div>
       </section>
 
@@ -162,7 +150,7 @@
         <div class="about-working__steps working-steps">
           <ul class="working-steps__list">
             <li class="working-steps__item">
-              <button class="worcking-steps__btn btn" data-path="one">1 шаг</button>
+              <button class="worcking-steps__btn btn active" data-path="one">1 шаг</button>
             </li>
             <li class="working-steps__item">
               <button class="worcking-steps__btn btn" data-path="two">2 шаг</button>

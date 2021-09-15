@@ -76,6 +76,7 @@ ul {
 }
 
 .section {
+  position: relative;
   margin-bottom: 100px;
 }
 
@@ -214,22 +215,24 @@ ul {
   width: 24px;
   height: 24px;
 }
-
 .header__burger {
   display: none;
-  border: none;
-  background-color: var(--transparent-color);
-  padding: 5px;
 }
+
 .burger-menu {
   position: absolute;
   left: -100%;
-  top: clamp( 68px, 10vw, 100px);
-  z-index: 10;
-  padding: 30px 2vw;
-  width: 100%;
-  color: #fff;
-  background-color: #222;
+  top: 0;
+  z-index: 100;
+  padding: clamp( 60px, 20vw, 162px)  0 0 clamp( 15px, 10vw, 50px);
+  width: clamp( 320px, 10vw, 420px);
+  height:  clamp( 500px, 50vw, 768px);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--text-default);
+  background-color: var(--white-color);
 }
 
 .burger-menu__list {
@@ -244,7 +247,7 @@ ul {
 }
 
 .burger-menu__list-item:not(:last-child) {
-  margin-bottom: 23px;
+  margin-bottom:  clamp( 20px, 15vw, 60px);
 }
 .burger-menu__list-link:hover {
   color: var(--main-color);
@@ -256,14 +259,6 @@ ul {
 
 .burger-menu__list-link:active {
   color: var(--active-color);
-}
-
-.burger-menu_overlay {
-  height: 100%;
-  width: 100%;
-  background-color: #222222a5;
-  position: absolute;
-  left: 0;
 }
 
 .is-activ {
@@ -278,7 +273,7 @@ ul {
 /* Slider */
 .swiper {
   width: 100%;
-  height: 100%;
+  height: 620px;
 }
 .swiper-pagination {
   bottom: 25px !important;
@@ -297,14 +292,33 @@ ul {
   background: #FFFFFF;
 }
 
-.preview-section {
-  position: relative;
-  padding: 100px 80px;
-  color: var(--white-color);
-  background-image: url("../img/low-angle-photo-of-balconies-2462015.jpg");
+.swiper-slide__content {
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.swiper-slide__one {
+  background-image: url("../img/low-angle-photo-of-balconies-2462015.jpg");
+}
+
+.swiper-slide__two {
+  background-image: url("../img/brown-and-blue-glass-building-2093076\ 2.jpg");
+}
+
+.swiper-slide__three {
+  background-image: url("../img/apartment-apartment-building-architecture-building-323705\ 2.jpg");
+}
+
+.preview-section {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  z-index: 10;
+  padding: 100px 80px;
+  color: var(--white-color);
 }
 
 .preview-section__heading {
@@ -327,6 +341,7 @@ ul {
 }
 
 .preview-section__link {
+  pointer-events: auto;
   display: inline-block;
   padding: 24px 39px;
   background-color: var(--main-color);
@@ -507,11 +522,7 @@ ul {
   outline: 2px solid var(--main-color);
 }
 
-.worcking-steps__btn:active {
-  color:  var(--active-color);
-}
-
-.worcking-steps__btn:active {
+.worcking-steps__btn.active {
   color:  var(--active-color);
 }
 
@@ -1167,13 +1178,72 @@ details > summary {
   .header__search {
     margin: 0;
   }
-  /* ------------------------------ */
-  /* Slider */
-  .preview-section {
-    padding: 160px 77px;
-    background-image: url(../img/low-angle-photo-of-balconies-2462015-1024.jpg);
+
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 23px;
+    z-index: 20;
+    margin-bottom: 4px;
   }
 
+  .header__burger span {
+    background-color: var(--text-default);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    top: 10px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header__burger::before,
+  .header__burger::after {
+    content: "";
+    background-color: var(--text-default);
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header__burger::before {
+    top: 0;
+  }
+
+  .header__burger::after {
+    bottom: 0;
+  }
+
+  .header__burger.active:before {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+
+  .header__burger.active:after {
+    bottom: 10px;
+    transform: rotate(-45deg);
+  }
+
+  .header__burger.active span {
+    transform: scale(0);
+  }
+
+  /* ------------------------------ */
+  /* Slider */
+  .swiper {
+    width: 100%;
+    height: 668px;
+  }
+
+  .preview-section {
+    padding: 160px 77px;
+  }
+  .swiper-slide__one {
+    background-image: url(../img/low-angle-photo-of-balconies-2462015-1024.jpg);
+  }
   .preview-section__heading {
     font-size: 3.75rem;
     line-height: 4.563rem;
@@ -1331,11 +1401,18 @@ details > summary {
   }
   /* ------------------------------ */
   /* Slider */
-  .preview-section {
-    padding: 160px 40px;
-    background-image: url("../img/low-angle-photo-of-balconies-768.jpg");
+  .swiper {
+    width: 100%;
+    height: 662px;
   }
 
+  .preview-section {
+    padding: 160px 40px;
+
+  }
+  .swiper-slide__one {
+    background-image: url("../img/low-angle-photo-of-balconies-768.jpg");
+  }
   .preview-section__heading {
     margin-bottom: 16px;
     line-height: 3.813rem;
@@ -1533,6 +1610,11 @@ details > summary {
   }
   /* ------------------------------ */
   /* Slider */
+  .swiper {
+    width: 100%;
+    height: 308px;
+  }
+
   .preview-section {
     display: flex;
     flex-direction: column;
