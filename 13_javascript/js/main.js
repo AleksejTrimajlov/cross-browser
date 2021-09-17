@@ -1,7 +1,9 @@
 window.addEventListener('DOMContentLoaded', function() {
+
   document.querySelector('.header__search-btn').addEventListener('click', function() {
     document.querySelector('.search-active-container').classList.toggle('hidden');
   });
+
   document.querySelector('.search-active-container__close').addEventListener('click', function() {
     document.querySelector('.search-active-container').classList.toggle('hidden');
   });
@@ -12,9 +14,7 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 
   document.querySelectorAll('.worcking-steps__btn').forEach(function(tabsBtn) {
-
     tabsBtn.addEventListener('click', function(event) {
-
       const path = event.currentTarget.dataset.path;
 
       document.querySelectorAll('.about-working__step-card').forEach(function(tabContent) {
@@ -27,6 +27,7 @@ window.addEventListener('DOMContentLoaded', function() {
       event.currentTarget.classList.add('active');
     });
   });
+
 });
 
 var swiper = new Swiper(".mySwiper", {
@@ -42,5 +43,5 @@ $( function() {
     collapsible: true,
     heightStyle: "content"
   });
-} );
+});
 

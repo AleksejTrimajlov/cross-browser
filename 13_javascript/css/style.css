@@ -113,7 +113,7 @@ ul {
 }
 
 .header__logo {
- margin-right: auto;
+  margin-right: auto;
 }
 
 .header__logo-img {
@@ -134,7 +134,7 @@ ul {
 
 .header__list-item {
   border-bottom: 1px solid var(--transparent-color);
-  transition-property:   border-bottom, color ;
+  transition-property: border-bottom, color ;
   transition-duration: .2s;
   transition-timing-function: ease;
 }
@@ -215,6 +215,7 @@ ul {
   width: 24px;
   height: 24px;
 }
+
 .header__burger {
   display: none;
 }
@@ -249,6 +250,7 @@ ul {
 .burger-menu__list-item:not(:last-child) {
   margin-bottom:  clamp( 20px, 15vw, 60px);
 }
+
 .burger-menu__list-link:hover {
   color: var(--main-color);
 }
@@ -272,24 +274,30 @@ ul {
 /* ------------------------------ */
 /* Slider */
 .swiper {
+  position: absolute;
+  z-index: 0;
   width: 100%;
-  height: 620px;
+  height: 100%;
 }
+
 .swiper-pagination {
   bottom: 25px !important;
 }
+
 .swiper-pagination-bullet {
   margin: 0 !important;
   width: 15px;
   height: 15px;
   background: rgba(255, 255, 255, 0.4);
 }
+
 .swiper-pagination-bullet +
 .swiper-pagination-bullet {
   margin-left: 20px !important;
 }
+
 .swiper-pagination-bullet-active {
-  background: #FFFFFF;
+  background: var(--white-color);
 }
 
 .swiper-slide__content {
@@ -313,10 +321,13 @@ ul {
 }
 
 .preview-section {
-  position: absolute;
-  top: 0;
+  overflow: hidden;
+  height: 620px;
+}
+
+.preview-section__contant{
+  position: relative;
   pointer-events: none;
-  z-index: 10;
   padding: 100px 80px;
   color: var(--white-color);
 }
@@ -484,18 +495,23 @@ ul {
   background-position: right bottom;
   background-repeat: no-repeat;
 }
+
 .step-card--one {
   background-image: url(../img/Rectangle\ 17.jpg);
 }
+
 .step-card--two {
   background-image: url(../img/Rectangle\ 18.jpg);
 }
+
 .step-card--three {
   background-image: url(../img/Rectangle\ 19.jpg);
 }
+
 .step-card--four {
   background-image: url(../img/Rectangle\ 20.jpg);
 }
+
 .working-steps__list {
   display: flex;
   align-items: center;
@@ -679,6 +695,7 @@ details > summary {
   height: 3.125em;
   flex-shrink: 0;
   margin-left: 17px;
+  cursor: pointer;
 }
 
 .questions__ellipse {
@@ -896,7 +913,7 @@ details > summary {
 
 .footer__submit:hover {
   background-color: var(--focus-color);
- }
+}
 
 .footer__submit:focus {
   background-color: var(--focus-color);
@@ -965,17 +982,19 @@ details > summary {
   .header__container {
     padding: 1rem 0 1rem 0;
   }
+
   .header__search-btn {
     width: 1.25rem;
     height: 1.25rem;
   }
+
   .header__logo-img {
     width:  clamp( 224px, 7vw, 300px);
     height: clamp(  72px, 9vh, 120px);
   }
   /* ------------------------------ */
   /* Slider */
-  .preview-section {
+  .preview-section__contant{
     padding: 6.25em 5em;
   }
 
@@ -1097,17 +1116,20 @@ details > summary {
   .about-us__details {
     flex-wrap: wrap;
   }
+
   .about-us__card_main {
     margin: 0 auto;
     flex-grow: 0;
     padding-top: 426px;
     width: clamp(720px, 45vw, 880px);
   }
+
   .about-us__card {
     padding: 65px clamp(20px, 1vw, 117px);
     padding-left: clamp(220px, 15vw, 300px);
     background-position: left clamp(30px, 1.5vw, 60px) top 65px
   }
+
   .about-us__details > * + * {
     width: clamp(720px, 45vw, 880px);
     margin: auto;
@@ -1118,6 +1140,7 @@ details > summary {
     background-size: clamp(100px, 45vw, 870px) 460px;
     background-position: right;
   }
+
   .step-card__description {
     max-width: clamp(100px, 50vw, 758px);
   }
@@ -1126,13 +1149,16 @@ details > summary {
   .footer__navigation {
     margin-right: clamp(25px, 2.5vw, 115px);
   }
+
   .footer__info {
     padding-top: clamp(77px, 8vw, 88px);
     max-width: clamp(250px, 24vw, 363px) ;
   }
+
   .footer__form {
     max-width: clamp(408px, 40vw, 570px) ;
   }
+
   .footer__form-submits {
     flex-wrap: wrap;
   }
@@ -1160,11 +1186,6 @@ details > summary {
     display: none;
   }
 
-  .header__burger {
-    display: block;
-    padding-left: 0;
-  }
-
   .header__logo {
     margin: 0;
     margin-right: 11px;
@@ -1181,10 +1202,11 @@ details > summary {
 
   .header__burger {
     display: block;
+    padding-left: 0;
     position: relative;
     width: 30px;
     height: 23px;
-    z-index: 20;
+    z-index: 200;
     margin-bottom: 4px;
   }
 
@@ -1230,20 +1252,20 @@ details > summary {
   .header__burger.active span {
     transform: scale(0);
   }
-
   /* ------------------------------ */
   /* Slider */
-  .swiper {
-    width: 100%;
+  .preview-section {
     height: 668px;
   }
 
-  .preview-section {
+  .preview-section__contant{
     padding: 160px 77px;
   }
+
   .swiper-slide__one {
     background-image: url(../img/low-angle-photo-of-balconies-2462015-1024.jpg);
   }
+
   .preview-section__heading {
     font-size: 3.75rem;
     line-height: 4.563rem;
@@ -1297,6 +1319,7 @@ details > summary {
     padding-right: 487px;
     background-size: 437px 689px;
   }
+
   .step-card--one {
     background-image: url(../img/Rectangle18-1024.jpg);
   }
@@ -1368,6 +1391,7 @@ details > summary {
     background-size: clamp(100px, 45vw, 437px) 689px;
     background-position: right ;
   }
+
   .step-card__description {
     max-width: clamp(100px, 45vw, 437px);
   }
@@ -1376,6 +1400,7 @@ details > summary {
   .footer__navigation {
     margin-right: clamp(25px, 8vw, 133px);
   }
+
   .footer__form-submits {
     flex-wrap: wrap;
   }
@@ -1384,6 +1409,7 @@ details > summary {
   .container {
     max-width: 668px;
   }
+
   .section {
     margin-bottom: 79px;
   }
@@ -1393,26 +1419,28 @@ details > summary {
     padding-top: 10px;
     padding-bottom: 7px;
   }
+
   .header__burger {
     padding-top: 2px;
   }
+
   .burger-menu {
     top: clamp( 68px, 9vw, 100px);
   }
   /* ------------------------------ */
   /* Slider */
-  .swiper {
-    width: 100%;
+  .preview-section {
     height: 662px;
   }
 
-  .preview-section {
+  .preview-section__contant{
     padding: 160px 40px;
-
   }
+
   .swiper-slide__one {
     background-image: url("../img/low-angle-photo-of-balconies-768.jpg");
   }
+
   .preview-section__heading {
     margin-bottom: 16px;
     line-height: 3.813rem;
@@ -1428,6 +1456,7 @@ details > summary {
   .about-us__content {
     margin-bottom: 60px;
   }
+
   .about-us__card-main-info {
     padding: 34px 40px;
   }
@@ -1466,6 +1495,7 @@ details > summary {
     background-size:  668px 284px;
     background-position: top;
   }
+
   .step-card--one {
     background-image: url(../img/Rectangle18-768.jpg);
   }
@@ -1524,20 +1554,24 @@ details > summary {
   :root {
     font-size: clamp(14px, .8em, 16px);
   }
+
   .container {
     max-width: 95vw;
   }
+
   .headings {
     font-size: clamp(31px, 3vw, 42px);
   }
   /* ------------------------------ */
   /* Slider */
-  .preview-section {
+  .preview-section__contant{
     padding: clamp(40px, 15vw, 160px) clamp(10px, 5vw, 40px);
   }
+
   .preview-section__heading {
     font-size: clamp(43px, 3em, 50px);
   }
+
   .preview-section__link {
     display: block;
     max-width: 300px;
@@ -1547,9 +1581,11 @@ details > summary {
   .about-us__card-main-info {
     flex-direction: column;
   }
+
   .about-us__detail-link {
     margin-left: 0;
   }
+
   .about-us__card {
     padding: 135px 40px 34px;
     background-position: left 23px top 20px;
@@ -1559,9 +1595,11 @@ details > summary {
   .working-steps__item:not(:last-child) {
     margin-right: clamp(2rem, 3vw, 5.375rem) ;
   }
+
   .step-card__link + .step-card__link {
     margin-left: clamp(0px, 5vw, 27px); ;
   }
+
   .step-card__link {
     padding: 20px clamp(20px, 10vw, 38px);
   }
@@ -1605,17 +1643,17 @@ details > summary {
     width: 10px;
     height: 10px;
   }
+
   .swiper-pagination {
     bottom: 11px !important;
   }
   /* ------------------------------ */
   /* Slider */
-  .swiper {
-    width: 100%;
+  .preview-section {
     height: 308px;
   }
 
-  .preview-section {
+  .preview-section__contant{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1722,6 +1760,7 @@ details > summary {
     font-weight: normal;
     font-size: .875rem;
     line-height: 1.063rem;
+    cursor: pointer;
   }
 
   .working-steps__item:not(:last-child) {
