@@ -214,6 +214,17 @@ ul {
 .search-active-container__close-icon {
   width: 24px;
   height: 24px;
+  transition-property:   stroke, fill ;
+  transition-duration: .2s;
+  transition-timing-function: ease;
+}
+
+.search-active-container__close-icon:hover circle{
+  stroke: var(--main-color);
+}
+
+.search-active-container__close-icon:hover rect {
+  fill: var(--main-color);
 }
 
 .header__burger {
@@ -290,7 +301,19 @@ ul {
   width: 15px;
   height: 15px;
   background: rgba(255, 255, 255, 0.4);
+  transition-property:   box-shadow ;
+  transition-duration: .2s;
+  transition-timing-function: ease;
 }
+
+.swiper-pagination-bullet:hover {
+  box-shadow: 0 0 1px 2px #fff;
+}
+.swiper-pagination-bullet:focus {
+  box-shadow: 0 0 1px 2px #fff;
+  outline: none;
+}
+
 
 .swiper-pagination-bullet +
 .swiper-pagination-bullet {
@@ -659,12 +682,10 @@ details > summary {
 
 .questions__item:hover {
   color: var(--main-color);
-  border-color: var(--main-color);
 }
 
 .questions__item:focus {
   color: var(--main-color);
-  border-color: var(--main-color);
 }
 
 .questions__item:active {
@@ -704,11 +725,11 @@ details > summary {
   transition: fill, transform .2s ease;
 }
 .questions__item:hover .questions__ellipse {
-  fill: var(--main-color);
+  fill: #D2D2D2;
 }
 
 .questions__item:focus .questions__ellipse {
-  fill: var(--main-color);
+  fill: #D2D2D2;
 }
 
 .questions__item:active .questions__ellipse {
@@ -716,11 +737,11 @@ details > summary {
 }
 
 .questions__item:hover .questions__path {
-  fill: var(--white-color);
+  fill: var(--active-btn-color);
 }
 
 .questions__item:focus .questions__path {
-  fill: var(--white-color);
+  fill: var(--active-btn-color);
 }
 
 .questions__item:active .questions__path {
@@ -929,15 +950,16 @@ details > summary {
 
 .footer__label-checkbox {
   position: relative;
-  padding-left: 18px;
   padding-top: 3px;
   cursor: pointer;
 }
 
 .checkbox {
-  display: none;
+  opacity: 0;
 }
-
+.checkbox:focus + span {
+  outline: 1px solid #fff;
+}
 .checkbox + span {
   position: absolute;
   top: 12px;

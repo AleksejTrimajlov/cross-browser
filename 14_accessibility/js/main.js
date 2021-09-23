@@ -36,6 +36,9 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  a11y: {
+    paginationBulletMessage: 'Переход к следующиму слайду {{index}}',
+  },
 });
 
 $( function() {
