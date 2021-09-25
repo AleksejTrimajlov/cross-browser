@@ -37,7 +37,7 @@ var swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
   a11y: {
-    paginationBulletMessage: 'Переход к следующиму слайду {{index}}',
+    paginationBulletMessage: 'Переход к следующему слайду {{index}}',
   },
 });
 
