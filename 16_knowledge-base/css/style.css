@@ -50,6 +50,7 @@ body {
   height: 309px;
   display: inline-flex;
   flex-direction: column;
+  align-items: flex-start;
   padding: 21px 30px 30px;
   margin: 0;
   background-color: #fff;
@@ -81,11 +82,11 @@ body {
 }
 
 .checkbox-form__checkbox:focus + span {
-  outline: 1px solid #fff;
+  outline: 1px solid rgb(0, 0, 0);
 }
 
 .checkbox-form__checkbox:focus-visible + span {
-  outline: 1px solid #fff;
+  outline: 1px solid rgb(0, 0, 0);
 }
 
 .checkbox-form__checkbox + span {
@@ -202,6 +203,15 @@ body {
 .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
   background-color: #CCB26E;
 }
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 7px!important;
+  bottom: 6px!important;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1 !important;
+}
 /*   */
 .validation-form {
   display: inline-flex;
@@ -218,14 +228,13 @@ body {
   padding-top: 15px;
 }
 
-.validation-form__description {
+.js-validate-error-label {
   position: absolute;
   top: 0;
   left: 20px;
   font-family: Roboto;
   font-size: 12px;
   line-height: 14px;
-  color: #FF5C00;
 }
 
 .validation-form__input {
@@ -269,7 +278,6 @@ body {
 }
 /*   */
 .tooltip-contain {
-  position: relative;
   width: 375px;
   height: 160px;
   background-color: #fff;
@@ -278,19 +286,25 @@ body {
 
 .tooltip-contain__paragraph {
   margin: 0;
+  display: inline;
   font-size: 14px;
   line-height: 170%;
   color: #333333;
+}
+.tooltip {
+  display: inline;
+  position: relative;
+  text-align: center;
 }
 
 .tooltip-contain__tooltip {
   cursor: pointer;
   position: absolute;
-  right: 100px;
-  bottom: 22px;
+  display: inline;
 }
 
 .tooltip-contain__icon {
+  vertical-align: bottom;
   transition-property: fill ;
   transition-duration: .3s;
   transition-timing-function: ease;
@@ -301,10 +315,11 @@ body {
 }
 
 .popup {
+  width: 163px;
+  z-index: 1;
+  bottom: 130%;
+  right: -89px;
   position: absolute;
-  right: 29px;
-  bottom: 52px;
-  display: inline-block;
   padding: 7px 15px;
   text-align: center;
   background-color: #666666;
@@ -319,7 +334,7 @@ body {
 .popup::after {
   content: " ";
   position: absolute;
-  left: 44%;
+  left: calc(50% - 10px);
   bottom: -17px;
   border-style: solid;
   border-color: #666 transparent transparent;

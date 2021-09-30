@@ -30,12 +30,13 @@ function init(){
   myMap.geoObjects.add(myPlacemark);
 };
 
-var selector = document.querySelectorAll("input[type='tel']");
+var selector = document.querySelector("input[type='tel']");
 var im = new Inputmask("+7 (999)-999-99-99");
 
 im.mask(selector);
 
 new JustValidate('.js-form', {
+  colorWrong: '#FF5C00',
   rules: {
     name: {
       required: true,
@@ -45,7 +46,7 @@ new JustValidate('.js-form', {
     tel: {
       required: true,
       function: (name, value) => {
-        const phone = selector.inputmask.unmaskedvalue()
+        const phone = selector.inputmask.unmaskedvalue();
         return Number(phone) && phone.length === 10
       }
     },
@@ -53,5 +54,12 @@ new JustValidate('.js-form', {
       required: true,
       email: true
     }
-  }
+  },
+  messages: {
+    name: 'Как вас зовут?',
+    tel: 'Укажите ваш телефон',
+    email: 'Укажите ваш e-mail'
+  },
+
 });
+
