@@ -48,7 +48,6 @@ img {
 
 .container {
   max-width: 1110px;
-  padding: 0;
 }
 
 .heading {
@@ -165,6 +164,23 @@ img {
   background: #3F2AFF;
   border-radius: 20px;
   padding: 24px 77px;
+  transition: background-color .2s ease;
+}
+.hero-section__link:hover {
+  background-color: #1400c3;
+}
+
+.hero-section__link:focus {
+  background-color: #1400c3;
+}
+
+.hero-section__link:focus-visible {
+  background-color: #1400c3;
+  outline: none;
+}
+
+.hero-section__link:active {
+  background-color: #1400c3;
 }
 
 /* advantages */
@@ -344,8 +360,24 @@ img {
   color: #fff;
   font-size: 16px;
   font-weight: bold;
+  transition: background-color .2s ease;
+}
+.courses-section__link:hover {
+  background-color: #1400c3;
 }
 
+.courses-section__link:focus {
+  background-color: #1400c3;
+}
+
+.courses-section__link:focus-visible {
+  background-color: #1400c3;
+  outline: none;
+}
+
+.courses-section__link:active {
+  background-color: #1400c3;
+}
 /*footer*/
 .footer {
   position: relative;
